@@ -1,0 +1,14 @@
+{
+	"category" : "Tuples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"d" ],
+	"name" : "Quadruple",
+	"pools" : [
+		 ],
+	"super" : "Triple",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Tuples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"e" ],
+	"name" : "Quintuple",
+	"pools" : [
+		 ],
+	"super" : "Quadruple",
+	"type" : "normal" }
