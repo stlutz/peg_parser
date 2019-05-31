@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"createWithInput:result:success:time:" : "fs 4/9/2019 16:49",
+		"new" : "fs 4/9/2019 16:38" },
+	"instance" : {
+		"initializeWithInput:result:success:time:" : "fs 4/9/2019 16:48",
+		"input" : "fs 4/9/2019 16:51",
+		"inputSize" : "fs 4/9/2019 16:52",
+		"result" : "fs 4/9/2019 16:51",
+		"success" : "fs 4/9/2019 16:51",
+		"time" : "fs 4/9/2019 16:51" } }

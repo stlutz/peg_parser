@@ -1,0 +1,17 @@
+{
+	"category" : "Benchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"input",
+		"result",
+		"success",
+		"time" ],
+	"name" : "ParBParsingResult",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

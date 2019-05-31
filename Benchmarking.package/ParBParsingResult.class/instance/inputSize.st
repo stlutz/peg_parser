@@ -1,0 +1,3 @@
+getters
+inputSize
+	^input size

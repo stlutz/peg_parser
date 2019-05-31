@@ -1,0 +1,16 @@
+{
+	"category" : "Benchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"benchmarker",
+		"results",
+		"selectedResult" ],
+	"name" : "ParBBenchmarkerBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

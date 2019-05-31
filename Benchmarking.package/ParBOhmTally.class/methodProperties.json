@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"analyze" : "fs 5/31/2019 14:21",
+		"analyzeWithLimit:" : "fs 5/24/2019 16:17",
+		"defaultLimit" : "fs 5/29/2019 11:59",
+		"initialize" : "fs 5/14/2019 14:32",
+		"run" : "fs 5/29/2019 12:13",
+		"runWithLimit:" : "fs 5/31/2019 14:21" } }
