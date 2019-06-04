@@ -1,0 +1,16 @@
+{
+	"category" : "Ohm-Analyzer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"expr",
+		"adjacent",
+		"ruleName" ],
+	"name" : "OhmGrammarGraphNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

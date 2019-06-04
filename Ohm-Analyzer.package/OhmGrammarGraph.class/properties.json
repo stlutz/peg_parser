@@ -1,0 +1,15 @@
+{
+	"category" : "Ohm-Analyzer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"grammar",
+		"exprNodes" ],
+	"name" : "OhmGrammarGraph",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

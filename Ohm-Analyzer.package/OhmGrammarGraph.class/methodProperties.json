@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"new:" : "fs 6/4/2019 11:14" },
+	"instance" : {
+		"addEdges:" : "fs 6/4/2019 14:45",
+		"addExprNode:" : "fs 6/4/2019 14:59",
+		"addExprNode:withRuleName:" : "fs 6/4/2019 15:07",
+		"buildWith:" : "fs 6/4/2019 15:04",
+		"initialize" : "fs 6/4/2019 14:00",
+		"stripExpr:" : "fs 6/4/2019 14:27" } }
