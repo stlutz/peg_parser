@@ -1,0 +1,16 @@
+{
+	"category" : "Graphs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"from",
+		"to",
+		"data" ],
+	"name" : "Edge",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

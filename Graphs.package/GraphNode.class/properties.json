@@ -1,0 +1,15 @@
+{
+	"category" : "Graphs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"data",
+		"adj" ],
+	"name" : "GraphNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

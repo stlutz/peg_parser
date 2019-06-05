@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addAdj:data:" : "fs 6/5/2019 12:59",
+		"adjData:" : "fs 6/5/2019 14:26",
+		"at:" : "fs 6/5/2019 13:02",
+		"at:put:" : "fs 6/5/2019 11:00",
+		"data" : "fs 6/5/2019 10:57",
+		"hasAdj:" : "fs 6/5/2019 14:19",
+		"includesAdj:" : "fs 6/5/2019 14:20",
+		"initialize" : "fs 6/5/2019 10:56",
+		"neighbors" : "fs 6/5/2019 13:39",
+		"removeAdj:" : "fs 6/5/2019 13:46" } }
