@@ -5,4 +5,4 @@ removeNode: n
 	neighbors := node neighbors.
 	neighbors do: [:neighbor |
 		neighbor removeAdj: node].
-	nodes removeKey: n ifAbsent: []
+	nodes removeKey: n

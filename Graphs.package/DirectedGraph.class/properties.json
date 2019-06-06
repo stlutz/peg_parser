@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"ident",
-		"data",
-		"adj" ],
-	"name" : "GraphNode",
+		 ],
+	"name" : "DirectedGraph",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Graph",
 	"type" : "normal" }

@@ -1,4 +1,3 @@
 as yet unclassified
-at: ident put: value
-	ident class == Symbol
-		ifTrue: [^ data at: ident put: value]
+at: attrIdent put: value
+	^ data at: attrIdent put: value

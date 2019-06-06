@@ -1,16 +1,14 @@
 {
-	"category" : "Graphs",
+	"category" : "Graphs-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"ident",
-		"data",
-		"adj" ],
-	"name" : "GraphNode",
+		 ],
+	"name" : "GraphTests",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }
