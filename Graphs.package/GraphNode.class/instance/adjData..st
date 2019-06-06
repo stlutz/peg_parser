@@ -1,3 +1,3 @@
 as yet unclassified
 adjData: aGraphNode
-	^ adj at: aGraphNode data
+	^ (adj at: aGraphNode) data

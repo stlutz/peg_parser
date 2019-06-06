@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addEdgeFrom:to:data:" : "fs 6/5/2019 16:46",
+		"addEdgeFrom:to:data:" : "fs 6/6/2019 16:12",
 		"addNode:" : "fs 6/5/2019 16:39",
 		"predecessors:" : "fs 6/5/2019 16:37",
 		"removeEdgeFrom:to:" : "fs 6/5/2019 16:49",

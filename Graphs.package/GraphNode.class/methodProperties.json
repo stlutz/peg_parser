@@ -2,8 +2,8 @@
 	"class" : {
 		"new:" : "fs 6/5/2019 16:35" },
 	"instance" : {
-		"addAdj:data:" : "fs 6/5/2019 16:10",
-		"adjData:" : "fs 6/5/2019 14:26",
+		"addAdj:data:" : "fs 6/6/2019 11:06",
+		"adjData:" : "fs 6/6/2019 13:39",
 		"at:" : "fs 6/6/2019 09:13",
 		"at:put:" : "fs 6/6/2019 09:13",
 		"data" : "fs 6/5/2019 10:57",
@@ -12,5 +12,6 @@
 		"ident:" : "fs 6/5/2019 16:36",
 		"includesAdj:" : "fs 6/5/2019 14:20",
 		"initialize" : "fs 6/5/2019 16:14",
-		"neighbors" : "fs 6/5/2019 13:39",
-		"removeAdj:" : "fs 6/5/2019 16:14" } }
+		"neighbors" : "fs 6/6/2019 14:06",
+		"removeAdj:" : "fs 6/5/2019 16:14",
+		"removeKey:" : "fs 6/6/2019 10:24" } }

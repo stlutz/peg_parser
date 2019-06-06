@@ -2,5 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testNodeData" : "fs 6/6/2019 09:11",
+		"testEdgeData" : "fs 6/6/2019 14:22",
+		"testEdgeDataSmall" : "fs 6/6/2019 13:40",
+		"testEdgeHandling" : "fs 6/6/2019 13:43",
+		"testNeighborIdentity" : "fs 6/6/2019 14:15",
+		"testNodeData" : "fs 6/6/2019 09:43",
 		"testNodeHandling" : "fs 6/5/2019 17:01" } }

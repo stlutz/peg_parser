@@ -5,4 +5,4 @@ addEdgeFrom: u to: v data: aDataDictionary
 	vNode := self addNode: v.
 	edgeData := IdentityDictionary newFrom: aDataDictionary.
 	uNode addSucc: vNode data: edgeData.
-	uNode == vNode ifFalse: [vNode addPred: uNode data: edgeData]
+	vNode addPred: uNode data: edgeData.

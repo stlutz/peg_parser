@@ -1,3 +1,3 @@
 as yet unclassified
 removePred: aGraphNode
-	succ removeKey: aGraphNode ifAbsent: [].
+	pred removeKey: aGraphNode ifAbsent: [].
