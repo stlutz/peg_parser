@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"expr",
-		"adjacent",
-		"ruleName" ],
-	"name" : "OhmGrammarGraphNode",
+		"grammar",
+		"graph" ],
+	"name" : "OhmGrammarGraphBuilder",
 	"pools" : [
 		 ],
 	"super" : "Object",

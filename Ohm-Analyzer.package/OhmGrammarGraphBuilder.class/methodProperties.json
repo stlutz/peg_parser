@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"new:" : "fs 6/11/2019 11:37" },
+	"instance" : {
+		"addExpr:" : "fs 6/11/2019 13:29",
+		"addExpr:withName:" : "fs 6/11/2019 13:21",
+		"addExprEdges:" : "fs 6/11/2019 13:35",
+		"buildLeftRecursiveGraph" : "fs 6/11/2019 13:35",
+		"grammar:" : "fs 6/11/2019 11:36",
+		"graph" : "fs 6/11/2019 13:37",
+		"stripApplyExpr:" : "fs 6/11/2019 13:12" } }

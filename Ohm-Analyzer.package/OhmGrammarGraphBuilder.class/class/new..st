@@ -1,5 +1,5 @@
 as yet unclassified
 new: aGrammar
 	^ self new
-		buildWith: aGrammar;
+		grammar: aGrammar;
 		yourself.
