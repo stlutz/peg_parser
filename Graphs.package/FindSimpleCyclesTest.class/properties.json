@@ -1,0 +1,14 @@
+{
+	"category" : "Graphs-Algorithms-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FindSimpleCyclesTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -4,6 +4,7 @@
 	"instance" : {
 		"addEdgeFrom:to:data:" : "fs 6/6/2019 16:12",
 		"addNode:" : "fs 6/5/2019 16:39",
+		"isDirected" : "fs 6/10/2019 08:58",
 		"predecessors:" : "fs 6/5/2019 16:37",
 		"removeEdgeFrom:to:" : "fs 6/5/2019 16:49",
 		"removeNode:" : "fs 6/5/2019 16:53",

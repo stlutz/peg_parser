@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"new:" : "fs 6/6/2019 18:02" },
+	"instance" : {
+		"graph:" : "fs 6/6/2019 18:02",
+		"normalizeCycle:" : "fs 6/11/2019 10:09",
+		"result" : "fs 6/11/2019 10:55",
+		"saveCycle:" : "fs 6/11/2019 10:10",
+		"visit:" : "fs 6/11/2019 09:33" } }

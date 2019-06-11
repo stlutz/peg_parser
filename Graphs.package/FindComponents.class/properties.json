@@ -1,0 +1,21 @@
+{
+	"category" : "Graphs-Algorithms",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"graph",
+		"stack",
+		"inStack",
+		"visited",
+		"recursionCount",
+		"lowlink",
+		"maxRecursionCount",
+		"result" ],
+	"name" : "FindComponents",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

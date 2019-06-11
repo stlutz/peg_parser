@@ -17,11 +17,13 @@
 		"includes:" : "fs 6/5/2019 13:52",
 		"includesEdgeFrom:to:" : "fs 6/5/2019 14:21",
 		"initialize" : "fs 6/5/2019 10:55",
+		"isDirected" : "fs 6/10/2019 08:58",
 		"neighbors:" : "fs 6/6/2019 14:09",
 		"nodeData:" : "fs 6/5/2019 13:53",
 		"nodeData:at:" : "fs 6/5/2019 13:54",
 		"nodeData:at:put:" : "fs 6/5/2019 13:55",
 		"nodeData:removeKey:" : "fs 6/6/2019 09:41",
+		"nodes" : "fs 6/6/2019 18:19",
 		"removeEdgeFrom:to:" : "fs 6/5/2019 14:16",
 		"removeNode:" : "fs 6/5/2019 16:53",
 		"size" : "fs 6/5/2019 13:52" } }

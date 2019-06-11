@@ -1,0 +1,18 @@
+{
+	"category" : "Graphs-Algorithms",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"graph",
+		"currComponent",
+		"stack",
+		"inStack",
+		"result" ],
+	"name" : "FindSimpleCycles",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
