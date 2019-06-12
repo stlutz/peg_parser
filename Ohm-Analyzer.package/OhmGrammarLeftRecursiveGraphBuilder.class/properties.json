@@ -1,0 +1,14 @@
+{
+	"category" : "Ohm-Analyzer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OhmGrammarLeftRecursiveGraphBuilder",
+	"pools" : [
+		 ],
+	"super" : "OhmGrammarGraphBuilder",
+	"type" : "normal" }

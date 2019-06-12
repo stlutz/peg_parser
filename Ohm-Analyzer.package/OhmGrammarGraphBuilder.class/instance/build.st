@@ -1,5 +1,5 @@
 as yet unclassified
-buildLeftRecursiveGraph
+build
 	| collectedGrammars rules currentGrammar |
 	
 	graph := DirectedGraph new.
