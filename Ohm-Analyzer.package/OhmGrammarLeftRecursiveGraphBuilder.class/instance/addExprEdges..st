@@ -1,8 +1,5 @@
 as yet unclassified
 addExprEdges: expr
-	| actions |
-	actions := Dictionary new.
-
 	expr class = OhmPExprAlt ifTrue: [
 		expr terms do: [:term |
 			term := self addExpr: term.
