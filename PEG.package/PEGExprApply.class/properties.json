@@ -1,0 +1,15 @@
+{
+	"category" : "PEG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"identifier",
+		"childExpr" ],
+	"name" : "PEGExprApply",
+	"pools" : [
+		 ],
+	"super" : "PEGExpr",
+	"type" : "normal" }
