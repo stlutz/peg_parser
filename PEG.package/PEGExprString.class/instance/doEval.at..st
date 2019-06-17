@@ -1,5 +1,9 @@
 as yet unclassified
 doEval: string at: pos
-	matchString withIndexDo: [:index :character |
-		(character = string at: (pos + index - 1)) ifFalse: [^ -1]].
-	^ pos + matchString size
+	matchString withIndexDo: [:character :index |
+		(character == (string at: (pos + index - 1) ifAbsent: [nil])) ifFalse: [^ nil]].
+	^ PEGAbstractSyntaxTreeNode new
+		rule: self;
+		startPos: pos;
+		endPos: (pos + matchString size);
+		yourself

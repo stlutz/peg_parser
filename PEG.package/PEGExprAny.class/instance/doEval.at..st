@@ -1,4 +1,10 @@
 as yet unclassified
 doEval: string at: pos
-	(pos <= (string size)) ifTrue: [^ pos + 1].
-	^ -1
+	^ (pos <= (string size))
+		ifTrue: [
+			PEGAbstractSyntaxTreeNode new
+				rule: self;
+				startPos: pos;
+				endPos: pos + 1;
+				yourself]
+		ifFalse: [nil]

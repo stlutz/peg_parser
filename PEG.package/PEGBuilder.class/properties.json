@@ -1,0 +1,15 @@
+{
+	"category" : "PEG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rules",
+		"filledExprs" ],
+	"name" : "PEGBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

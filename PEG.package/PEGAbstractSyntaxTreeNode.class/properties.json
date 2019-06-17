@@ -1,0 +1,18 @@
+{
+	"category" : "PEG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"identifier",
+		"rule",
+		"startPos",
+		"endPos",
+		"children" ],
+	"name" : "PEGAbstractSyntaxTreeNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
