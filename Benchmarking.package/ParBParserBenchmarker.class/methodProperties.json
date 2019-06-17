@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"generateParsingResult:string:startTime:endTime:" : "fs 5/13/2019 13:53" },
+		"generateParsingResult:string:startTime:endTime:" : "fs 5/13/2019 13:53",
+		"generateParsingResult:string:time:" : "fs 6/12/2019 16:39" },
 	"instance" : {
 		"initialize" : "fs 5/13/2019 13:02",
 		"parse:" : "fs 5/13/2019 13:30" } }

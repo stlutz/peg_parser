@@ -1,3 +1,4 @@
 as yet unclassified
 initialize
-	parser := OhmGrammar new: OhmSmalltalk serializedGrammar
+	parser := OhmSmalltalk.
+	"parser := OhmGrammar new: OhmSmalltalk serializedGrammar"
