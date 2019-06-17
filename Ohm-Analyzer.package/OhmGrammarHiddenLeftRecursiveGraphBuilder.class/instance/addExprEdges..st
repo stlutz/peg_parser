@@ -1,5 +1,12 @@
 as yet unclassified
 addExprEdges: expr
+	expr class = OhmPExprApply ifTrue: [
+		| childName childExpr|
+		isSyntactic := (expr ruleName at: 1) isUppercase.
+		childName := expr ruleName.
+		childExpr := self addExpr: (grammar ruleNamed: childName) withName: childName.
+		graph addEdgeFrom: expr to: childExpr].
+
 	expr class = OhmPExprAlt ifTrue: [
 		expr terms do: [:term |
 			term := self addExpr: term.
@@ -21,7 +28,7 @@ addExprEdges: expr
 				state
 					grammar: grammar;
 					pushInput: (OhmInputStream on: '');
-					isSyntactic: false;
+					isSyntactic: isSyntactic;
 					pushBindings: OrderedCollection new;
 					shouldRecordFailures: false.
 				lastTermCanParseEpsilon := term eval: state]].

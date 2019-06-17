@@ -1,5 +1,11 @@
 as yet unclassified
 addExprEdges: expr
+	expr class = OhmPExprApply ifTrue: [
+		| childName childExpr|
+		childName := expr ruleName.
+		childExpr := self addExpr: (grammar ruleNamed: childName) withName: childName.
+		graph addEdgeFrom: expr to: childExpr].
+
 	expr class = OhmPExprAlt ifTrue: [
 		expr terms do: [:term |
 			term := self addExpr: term.
