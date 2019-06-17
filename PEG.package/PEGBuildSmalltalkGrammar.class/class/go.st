@@ -264,27 +264,17 @@ unaryPragma = identifier
 // ----------------------
 
 spaces = space*
+alnum := letter | digit
+letter := lower | upper
+lower := "a".."z"
+upper := "A".."Z"
+digit := "0".."9"
 }'.
 
 	grammar := OhmGrammar new: grammarDefinition.
 	grammar ruleDeclarations at: #space put: (
 		OhmRuleDefine newNamed: #space parameters: #() body: (
 			OhmPExprAlt newOn: {OhmPExprApply newOn: #comment . OhmPExprRange newFrom: Character null to: Character space})).
-	grammar ruleDeclarations at: #alnum put: (
-		OhmRuleDefine newNamed: #alnum parameters: #() body: (
-			OhmPExprAlt newOn: {OhmPExprApply newOn: #letter . OhmPExprApply newOn: #digit})).
-	grammar ruleDeclarations at: #letter put: (
-		OhmRuleDefine newNamed: #letter parameters: #() body: (
-			OhmPExprAlt newOn: {OhmPExprApply newOn: #lower . OhmPExprApply newOn: #upper})).
-	grammar ruleDeclarations at: #lower put: (
-		OhmRuleDefine newNamed: #lower parameters: #() body: (
-			OhmPExprRange newFrom: $a to: $z)).
-	grammar ruleDeclarations at: #upper put: (
-		OhmRuleDefine newNamed: #upper parameters: #() body: (
-			OhmPExprRange newFrom: $A to: $Z)).
-	grammar ruleDeclarations at: #digit put: (
-		OhmRuleDefine newNamed: #digit parameters: #() body: (
-			OhmPExprRange newFrom: $0 to: $9)).
 	grammar ruleDeclarations at: #any put: (
 		OhmRuleDefine newNamed: #any parameters: #() body: (
 			OhmPExprAnything new)).
