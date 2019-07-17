@@ -4,13 +4,10 @@ doEval: string at: pos
 	childExprs do: [:childExpr |
 		result := childExpr eval: string at: pos.
 		result == nil ifFalse: [
-			| children |
-			children := LinkedList new.
-			children add: result.
 			^ PEGAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: result endPos;
-				children: children;
+				children: {result};
 				yourself]].
 	^ nil

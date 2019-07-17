@@ -5,7 +5,7 @@ doEval: string at: pos
 	children := LinkedList new.
 	[
 		currentResult := childExpr eval: string at: currentPos.
-		currentResult == nil ifFalse: [
+		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: currentResult]
 	] doWhileTrue: [(currentResult == nil) not].
@@ -16,6 +16,6 @@ doEval: string at: pos
 				rule: self;
 				startPos: pos;
 				endPos: currentPos;
-				children: children;
+				children: children asArray;
 				yourself]
 		ifFalse: [nil]

@@ -5,6 +5,7 @@ result
 	grammar ruleDeclarations keysAndValuesDo: [:ruleName :ruleDefinition |
 		| expr convertedExpr |
 		expr := ruleDefinition body.
+		"self halt."
 		(ruleName at: 1) isUppercase "isSyntactic"
 			ifTrue: [convertedExpr := self convertSyntacticExpr: expr]
 			ifFalse: [convertedExpr := self convertExpr: expr].

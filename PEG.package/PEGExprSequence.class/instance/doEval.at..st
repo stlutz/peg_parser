@@ -2,14 +2,14 @@ as yet unclassified
 doEval: string at: pos
 	| currentPos currentResult children |
 	currentPos := pos.
-	children := LinkedList new.
-	childExprs do: [:childExpr |
+	children := Array new: childExprs size.
+	childExprs withIndexDo: [:childExpr :index |
 		currentResult := childExpr eval: string at: currentPos.
-		currentResult == nil
-			ifTrue: [^ nil]
-			ifFalse: [
+		currentResult
+			ifNil: [^ nil]
+			ifNotNil: [
 				currentPos := currentResult endPos.
-				children add: currentResult]].
+				children at: index put: currentResult]].
 	^ PEGAbstractSyntaxTreeNode new
 		rule: self;
 		startPos: pos;

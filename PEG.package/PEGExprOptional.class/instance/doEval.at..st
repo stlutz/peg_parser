@@ -8,15 +8,12 @@ doEval: string at: pos
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: LinkedList new;
+				children: {};
 				yourself]
 		ifFalse: [
-			| children |
-			children := LinkedList new.
-			children add: result.
 			PEGAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: result endPos;
-				children: children;
+				children: {result};
 				yourself]

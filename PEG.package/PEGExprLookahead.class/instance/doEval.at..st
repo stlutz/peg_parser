@@ -5,12 +5,12 @@ doEval: string at: pos
 	^ result == nil
 		ifTrue: [nil]
 		ifFalse: [
-			| children |
+			"| children |
 			children := LinkedList new.
-			children add: result.
+			children add: result."
 			PEGAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: children;
+				children: {result} "children";
 				yourself]
