@@ -2,15 +2,12 @@ as yet unclassified
 doEval: string at: pos
 	| result |
 	result := childExpr eval: string at: pos.
-	^ result == nil
-		ifTrue: [nil]
-		ifFalse: [
-			"| children |
-			children := LinkedList new.
-			children add: result."
+	^ result
+		ifNil: [nil]
+		ifNotNil: [
 			PEGAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: {result} "children";
+				children: result nodeList;
 				yourself]

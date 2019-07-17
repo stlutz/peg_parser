@@ -1,17 +1,17 @@
 as yet unclassified
 doEval: string at: pos
-	childExpr == nil
-		ifTrue: [self error]
-		ifFalse: [
+	childExpr
+		ifNil: [self error]
+		ifNotNil: [
 			| result |
 			result := childExpr doEval: string at: pos.
-			^ result == nil
-				ifTrue: [nil]
-				ifFalse: [
+			^ result
+				ifNil: [nil]
+				ifNotNil: [
 					PEGAbstractSyntaxTreeNode new
 						rule: self;
 						startPos: result startPos;
 						endPos: result endPos;
-						children: {result};
+						children: result nodeList;
 						identifier: identifier;
 						yourself]]

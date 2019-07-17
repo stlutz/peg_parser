@@ -15,5 +15,5 @@ doEval: string at: pos
 				rule: self;
 				startPos: pos;
 				endPos: result endPos;
-				children: {result};
+				children: result nodeList;
 				yourself]

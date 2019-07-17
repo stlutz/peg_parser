@@ -4,9 +4,10 @@ doEval: string at: pos
 	result := childExpr eval: string at: pos.
 	^ result == nil
 		ifTrue: [
-			PEGAbstractSyntaxTreeNode new
+			PEGShadowAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: pos;
+				children: {};
 				yourself]
 		ifFalse: [nil]

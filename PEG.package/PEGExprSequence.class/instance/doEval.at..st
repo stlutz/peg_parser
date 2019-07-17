@@ -10,9 +10,9 @@ doEval: string at: pos
 			ifNotNil: [
 				currentPos := currentResult endPos.
 				children at: index put: currentResult]].
-	^ PEGAbstractSyntaxTreeNode new
+	^ PEGShadowAbstractSyntaxTreeNode new
 		rule: self;
 		startPos: pos;
 		endPos: currentPos;
-		children: children;
+		children: (children collect: #nodeList) flatten;
 		yourself

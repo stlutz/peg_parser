@@ -16,6 +16,6 @@ doEval: string at: pos
 				rule: self;
 				startPos: pos;
 				endPos: currentPos;
-				children: children asArray;
+				children: (children collect: #nodeList) flatten asArray;
 				yourself]
 		ifFalse: [nil]
