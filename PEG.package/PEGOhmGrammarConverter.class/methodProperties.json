@@ -2,7 +2,6 @@
 	"class" : {
 		"new:" : "fs 6/17/2019 17:50" },
 	"instance" : {
-		"convertExpr:" : "fs 6/17/2019 18:22",
-		"convertSyntacticExpr:" : "fs 6/17/2019 18:19",
+		"convertExpr:isSyntactic:" : "fs 7/18/2019 17:24",
 		"grammar:" : "fs 6/17/2019 17:48",
-		"result" : "fs 7/16/2019 13:39" } }
+		"result" : "fs 7/18/2019 16:50" } }

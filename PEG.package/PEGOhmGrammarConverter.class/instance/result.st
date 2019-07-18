@@ -5,10 +5,9 @@ result
 	grammar ruleDeclarations keysAndValuesDo: [:ruleName :ruleDefinition |
 		| expr convertedExpr |
 		expr := ruleDefinition body.
-		"self halt."
-		(ruleName at: 1) isUppercase "isSyntactic"
-			ifTrue: [convertedExpr := self convertSyntacticExpr: expr]
-			ifFalse: [convertedExpr := self convertExpr: expr].
+		convertedExpr := (ruleName at: 1) isUppercase "isSyntactic"
+			ifTrue: [self convertExpr: expr isSyntactic: true]
+			ifFalse: [self convertExpr: expr isSyntactic: false].
 		builder addRule: (ruleName asSymbol) withExpr: convertedExpr].
 
 	^ builder buildGrammar
