@@ -3,7 +3,6 @@ doEval: string at: pos
 	| result |
 	result := childExpr eval: string at: pos.
 	^ result
-		ifNil: [nil]
 		ifNotNil: [
 			PEGAbstractSyntaxTreeNode new
 				rule: self;
@@ -11,3 +10,4 @@ doEval: string at: pos
 				endPos: pos;
 				children: result nodeList;
 				yourself]
+		ifNil: [nil]
