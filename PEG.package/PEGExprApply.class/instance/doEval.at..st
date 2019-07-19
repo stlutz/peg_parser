@@ -4,7 +4,7 @@ doEval: string at: pos
 		ifNil: [self error]
 		ifNotNil: [
 			| result |
-			result := childExpr doEval: string at: pos.
+			result := childExpr eval string at: pos.
 			^ result
 				ifNil: [nil]
 				ifNotNil: [
