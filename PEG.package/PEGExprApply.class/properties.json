@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"identifier",
-		"childExpr" ],
+		"childExpr",
+		"lastStringIdentityHash",
+		"memo" ],
 	"name" : "PEGExprApply",
 	"pools" : [
 		 ],
