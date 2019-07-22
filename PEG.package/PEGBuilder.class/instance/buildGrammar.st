@@ -1,5 +1,4 @@
 as yet unclassified
 buildGrammar
-	rules valuesDo: [:expr |
-		self fillApplyExprs: expr].
+	self fillApplyExprs.
 	^ PEG new: rules

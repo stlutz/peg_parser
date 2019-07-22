@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"rules",
-		"filledExprs" ],
+		"applyExprs" ],
 	"name" : "PEGBuilder",
 	"pools" : [
 		 ],

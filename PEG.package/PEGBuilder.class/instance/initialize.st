@@ -1,4 +1,4 @@
 as yet unclassified
 initialize
 	rules := IdentityDictionary new.
-	filledExprs := Set new.
+	applyExprs := IdentityDictionary new.
