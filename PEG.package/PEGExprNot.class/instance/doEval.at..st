@@ -1,13 +1,15 @@
 as yet unclassified
 doEval: string at: pos
-	| result |
+	| result childNode |
 	result := childExpr eval: string at: pos.
-	^ result
-		ifNil: [
+	childNode := result at: 1.
+	^ childNode
+		ifNil: [{
 			PEGShadowAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: pos;
 				children: {};
-				yourself]
-		ifNotNil: [nil]
+				yourself .
+			nil}]
+		ifNotNil: [{nil . PEGParsingError new: pos with: self}]

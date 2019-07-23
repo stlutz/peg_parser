@@ -6,15 +6,18 @@ doEval: string at: pos
 			self initialize].
 
 	^ memo at: pos ifAbsentPut: [
-		| result |
+		| result childNode rightmostError |
 		result := childExpr eval: string at: pos.
-		result
-			ifNotNil: [
+		childNode := result at: 1.
+		rightmostError := result at: 2.
+		childNode
+			ifNotNil: [{
 				PEGAbstractSyntaxTreeNode new
 					rule: self;
-					startPos: result startPos;
-					endPos: result endPos;
-					children: result nodeList;
+					startPos: childNode startPos;
+					endPos: childNode endPos;
+					children: childNode nodeList;
 					identifier: identifier;
-					yourself]
-			ifNil: [nil]]
+					yourself .
+				rightmostError}]
+			ifNil: [{nil . rightmostError}]]

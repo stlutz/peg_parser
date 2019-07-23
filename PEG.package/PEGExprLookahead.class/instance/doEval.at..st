@@ -1,13 +1,16 @@
 as yet unclassified
 doEval: string at: pos
-	| result |
+	| result childNode rightmostError |
 	result := childExpr eval: string at: pos.
-	^ result
-		ifNotNil: [
+	childNode := result at: 1.
+	rightmostError := result at: 2.
+	^ childNode
+		ifNotNil: [{
 			PEGAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: result nodeList;
-				yourself]
-		ifNil: [nil]
+				children: childNode nodeList;
+				yourself .
+			rightmostError}]
+		ifNil: [{nil . rightmostError}]
