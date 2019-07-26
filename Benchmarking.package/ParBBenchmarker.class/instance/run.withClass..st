@@ -1,5 +1,5 @@
 runner
-run: string
+run: string withClass: aClass
 	| messageTally result |
 	messageTally := MessageTally new.
 	messageTally spyEvery: 1 on: [

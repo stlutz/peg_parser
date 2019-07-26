@@ -8,12 +8,13 @@ testWithBenchmarker: aBenchmarker limit: aLimit
 		classes := Smalltalk allClasses copyFrom: 1 to: aLimit.
 	].
 	
+	aBenchmarker initialize.
 	results := LinkedList new.
 	classes do: [:cls |
 			(cls methodDict keys collect: [:key |
 				(cls sourceCodeAt: key) asString
 			]) do: [:methodString |
-				results add: (aBenchmarker run: methodString).
+				results add: (aBenchmarker run: methodString withClass: cls).
 			]
 	] displayingProgress: [:cls | cls name asString].
 	
