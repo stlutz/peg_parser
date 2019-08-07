@@ -1,9 +1,9 @@
 as yet unclassified
 methodMock
-	^ 'parse{}: string atPos: pos
+	^ 'parse{1}: string atPos: pos
 	| char |
-	char := string at: pos ifAbsent: [^ nil]
-	^ (startChar <= char and: [char <= endChar])
+	char := string at: pos ifAbsent: [^ nil].
+	^ (#startChar <= char and: [char <= #endChar])
 		ifTrue: [
 			PEGAbstractSyntaxTreeNode new
 				rule: #range;

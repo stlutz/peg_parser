@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGExprManyGeneratorTest",
+	"pools" : [
+		 ],
+	"super" : "PEGExprTestAbstract",
+	"type" : "normal" }

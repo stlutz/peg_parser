@@ -10,12 +10,12 @@ methodMockWith: childCount
 				rule: #alternatives;
 				startPos: pos;
 				endPos: childResult endPos;
-				children: {childResult};
+				children: (Array with: childResult);
 				yourself].'.
 	footerCode := '^ nil'.
 
 	code := headerCode , Character linefeed.
-	1 to: childCount do: [:index | code := code , choiceCode format: {'{' , (index + 1) , '}'} , Character linefeed].
+	1 to: childCount do: [:index | code := code , (choiceCode format: {'{' , (index + 1) , '}'}) , Character linefeed].
 	code := code , footerCode.
 	
 	^ code

@@ -8,6 +8,6 @@ methodMock
 			PEGShadowAbstractSyntaxTreeNode new
 				rule: self;
 				startPos: pos;
-				endPos: pos;;
+				endPos: pos;
 				yourself]
 		ifNotNil: [nil]'

@@ -1,0 +1,16 @@
+{
+	"category" : "PEG-ParserGenerator-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"categoryName",
+		"parserName",
+		"parserClass" ],
+	"name" : "PEGExprTestAbstract",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

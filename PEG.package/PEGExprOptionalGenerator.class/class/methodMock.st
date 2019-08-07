@@ -9,12 +9,12 @@ methodMock
 				rule: #optional;
 				startPos: pos;
 				endPos: pos;
-				children: {};
+				children: (Array new: 0);
 				yourself]
 		ifNotNil: [
 			PEGAbstractSyntaxTreeNode new
 				rule: #optional;
 				startPos: pos;
 				endPos: childResult endPos;
-				children: {childResult};
+				children: (Array with: childResult);
 				yourself]'

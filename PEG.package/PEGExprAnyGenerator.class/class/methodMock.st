@@ -4,7 +4,7 @@ methodMock
 	^ (pos <= string size)
 		ifTrue: [
 			PEGAbstractSyntaxTreeNode new
-				rule: #any
+				rule: #any;
 				startPos: pos;
 				endPos: pos + 1;
 				yourself]

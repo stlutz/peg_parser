@@ -10,5 +10,5 @@ methodMock
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: {childResult};
+				children: (Array with: childResult);
 				yourself]'

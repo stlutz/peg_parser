@@ -5,11 +5,11 @@ methodMock
 	currentPos := pos.
 	children := OrderedCollection new.
 	[
-		currentResult := self parse{1}: string at: currentPos.
+		currentResult := self parse{2}: string atPos: currentPos.
 		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: childNode]
-	] doWhileTrue: [(currentResult) == nil not]
+	] doWhileTrue: [(currentResult == nil) not].
 
 	^ children size >= #minSize
 		ifTrue: [
