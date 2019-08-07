@@ -1,5 +1,7 @@
 {
 	"class" : {
-		 },
+		"methodMock" : "fs 8/7/2019 12:02",
+		"new:child:" : "fs 8/7/2019 12:03" },
 	"instance" : {
-		 } }
+		"childName:" : "fs 8/7/2019 12:03",
+		"compileInto:" : "fs 8/7/2019 12:04" } }
