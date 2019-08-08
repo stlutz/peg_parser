@@ -1,11 +1,10 @@
 as yet unclassified
-methodMock
-	^ 'parse{1}: string atPos: pos
-	| currentPos currentResult children |
+methodBodyMock
+	^ '| currentPos currentResult children |
 	currentPos := pos.
 	children := OrderedCollection new.
 	[
-		currentResult := self parse{2}: string atPos: currentPos.
+		currentResult := self parse_{1}: string atPos: currentPos.
 		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: childNode]

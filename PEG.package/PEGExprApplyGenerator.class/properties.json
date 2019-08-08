@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"childName" ],
+		"childGenerator" ],
 	"name" : "PEGExprApplyGenerator",
 	"pools" : [
 		 ],

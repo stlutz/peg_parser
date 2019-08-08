@@ -1,5 +1,5 @@
 {
 	"class" : {
-		"methodMock" : "fs 8/7/2019 15:59" },
+		"methodBodyMock" : "fs 8/8/2019 15:04" },
 	"instance" : {
-		"compileInto:" : "fs 8/5/2019 17:22" } }
+		"compile:into:" : "fs 8/8/2019 15:00" } }

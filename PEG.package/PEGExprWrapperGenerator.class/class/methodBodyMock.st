@@ -1,3 +1,3 @@
 as yet unclassified
-methodMock
+methodBodyMock
 	self subclassResponsibility

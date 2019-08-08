@@ -1,8 +1,7 @@
 as yet unclassified
-methodMock
-	^ 'parse{1}: string atPos: pos
-	| childResult |
-	childResult := self parse{2}: string atPos: pos.
+methodBodyMock
+	^ '| childResult |
+	childResult := self parse_{1}: string atPos: pos.
 	^ childResult
 		ifNil: [
 			PEGAbstractSyntaxTreeNode new

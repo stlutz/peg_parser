@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"methodMockWith:" : "fs 8/6/2019 10:59",
-		"new:children:" : "fs 8/6/2019 10:54" },
+		"methodBodyMockWith:" : "fs 8/8/2019 15:14",
+		"new:" : "fs 8/8/2019 13:06" },
 	"instance" : {
-		"childNames:" : "fs 8/6/2019 10:55",
-		"compileInto:" : "fs 8/7/2019 17:12" } }
+		"childGeneratorList:" : "fs 8/8/2019 13:05",
+		"compile:into:" : "fs 8/8/2019 15:40" } }

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"compileInto:" : "fs 7/26/2019 18:51",
-		"generateChildNames:" : "fs 8/5/2019 16:29",
-		"name:" : "fs 7/26/2019 18:57" } }
+		"childName:" : "fs 8/8/2019 14:18",
+		"childNames:count:" : "fs 8/8/2019 14:17",
+		"compile:into:" : "fs 8/8/2019 13:01",
+		"methodHead:" : "fs 8/8/2019 13:58" } }

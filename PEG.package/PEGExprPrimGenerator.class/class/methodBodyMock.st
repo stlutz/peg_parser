@@ -1,3 +1,3 @@
 as yet unclassified
-methodMockWith: childCount
+methodBodyMock
 	self subclassResponsibility

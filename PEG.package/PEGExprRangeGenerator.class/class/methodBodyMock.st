@@ -1,7 +1,6 @@
 as yet unclassified
-methodMock
-	^ 'parse{1}: string atPos: pos
-	| char |
+methodBodyMock
+	^ '| char |
 	char := string at: pos ifAbsent: [^ nil].
 	^ (#startChar <= char and: [char <= #endChar])
 		ifTrue: [

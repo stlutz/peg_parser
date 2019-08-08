@@ -1,3 +1,3 @@
 as yet unclassified
-compileInto: aClass
+compile: aName into: aClass
 	self subclassResponsibility

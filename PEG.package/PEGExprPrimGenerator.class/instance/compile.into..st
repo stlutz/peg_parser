@@ -1,15 +1,13 @@
 as yet unclassified
-compileInto: aClass
+compile: aName into: aClass
 	| methodString methodIdentifier method |
-	methodString := self class methodMock.
-
-	methodString := methodString format: {name . childName}.
+	methodString := (self methodHead: aName asString) , Character lf , self class methodBodyMock.
 	methodIdentifier := aClass compileSilently: methodString.
 	method := aClass methodDict at: methodIdentifier.
-
+	
 	(1 to: method numLiterals) do: [:index |
 		| literal |
 		literal := method objectAt: index + 1.
-		literal == #minSize
+		(literalDict includesKey: literal)
 			ifTrue: [
-				method objectAt: index + 1 put: minSize]]
+				method objectAt: index + 1 put: (literalDict at: literal)]].
