@@ -5,7 +5,7 @@ methodMockWith: childCount
 	| currentPos currentResult children |
 	currentPos := pos.
 	children := OrderedCollection new: ' , childCount , '.'.
-	elementCode := 'currentResult := self parse{1} atPos: pos.
+	elementCode := 'currentResult := self parse{1}: string atPos: currentPos.
 	currentResult
 		ifNil: [^ nil]
 		ifNotNil: [
@@ -14,12 +14,12 @@ methodMockWith: childCount
 	footerCode := '^ PEGShadowAbstractSyntaxTreeNode new
 		rule: #sequence;
 		startPos: pos;
-		endPos: currentResult endPos;
+		endPos: currentPos;
 		children: children;
 		yourself'.
 
 	code := headerCode , Character linefeed.
-	1 to: childCount do: [:index | code := code , elementCode format: {'{' , (index + 1) , '}'} , Character linefeed].
+	1 to: childCount do: [:index | code := code , (elementCode format: {'{' , (index + 1) , '}'}) , Character linefeed].
 	code := code , footerCode.
 	
 	^ code
