@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"methodMock" : "fs 8/7/2019 14:39",
-		"new:" : "fs 8/8/2019 13:06" },
+		"methodBodyMock" : "fs 8/9/2019 11:12",
+		"newWithRule:" : "fs 8/9/2019 11:22" },
 	"instance" : {
-		"childGenerator:" : "fs 8/8/2019 13:02",
-		"compileInto:" : "fs 8/7/2019 13:55" } }
+		"compile:into:" : "fs 8/9/2019 11:13",
+		"ruleName:" : "fs 8/9/2019 11:08" } }
