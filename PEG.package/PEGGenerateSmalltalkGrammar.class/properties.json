@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGGenerateSmalltalkGrammar",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
