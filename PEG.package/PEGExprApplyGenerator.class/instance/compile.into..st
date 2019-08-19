@@ -1,6 +1,9 @@
 as yet unclassified
 compile: aName into: aClass
-	| methodString |	
-	methodString := (self methodHead: aName asString) , Character lf , self class methodBodyMock.
-	methodString := methodString format: {ruleName}.
-	aClass compileSilently: methodString
+	| newName methodString |
+	newName := 'apply_' , ruleName.
+	methodString := (self class methodHead: newName) , Character lf , self class methodBodyMock.
+	methodString := methodString format: {'parse_' , ruleName}.
+	aClass compileSilently: methodString.
+
+	^ newName

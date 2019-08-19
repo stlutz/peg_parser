@@ -4,7 +4,7 @@ testLookahead
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.
 	lookaheadGenerator := PEGExprLookaheadGenerator new: stringGenerator.
 
-	lookaheadGenerator compile: #rule into: parserClass.
+	lookaheadGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123matchstring'.
 	

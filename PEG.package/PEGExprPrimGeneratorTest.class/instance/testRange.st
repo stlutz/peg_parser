@@ -3,7 +3,7 @@ testRange
 	| rangeGenerator parser parseString parseResult |
 	rangeGenerator := PEGExprRangeGenerator newFrom: $4 to: $9.
 	
-	rangeGenerator compile: #rule into: parserClass.
+	rangeGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123456789abc'.
 	

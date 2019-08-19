@@ -4,7 +4,7 @@ testOneOrMore
 	rangeGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.
 	oneOrMoreGenerator := PEGExprOneOrMoreGenerator new: rangeGenerator.
 	
-	oneOrMoreGenerator compile: #rule into: parserClass.
+	oneOrMoreGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123abc123456'.
 	

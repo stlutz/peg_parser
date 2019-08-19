@@ -15,7 +15,7 @@ testSequence
 				PEGExprStringGenerator newString: '_' } ) .
 		PEGExprStringGenerator newString: ':' }.
 	
-	sequenceGenerator compile: #rule into: parserClass.
+	sequenceGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := 'test test: 123 123: Test: test_2123abc: 1'. "word positions: 1 6 12 16 21 27 41"
 	

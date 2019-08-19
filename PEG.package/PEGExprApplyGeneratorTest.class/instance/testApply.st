@@ -14,13 +14,13 @@ testApply
 	bGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.
 	cGenerator := PEGExprStringGenerator newString: 'test'.
 
-	applyAGenerator compile: #applyA into: parserClass.
-	applyBGenerator compile: #applyB into: parserClass.
-	applyCGenerator compile: #applyC into: parserClass.
+	applyAGenerator compile: #apply_A into: parserClass.
+	applyBGenerator compile: #apply_B into: parserClass.
+	applyCGenerator compile: #apply_C into: parserClass.
 	
-	aGenerator	compile: #A into: parserClass.
-	bGenerator compile: #B into: parserClass.
-	cGenerator compile: #C into: parserClass.
+	aGenerator	compile: #parse_A into: parserClass.
+	bGenerator compile: #parse_B into: parserClass.
+	cGenerator compile: #parse_C into: parserClass.
 
 	parser := parserClass new.
 	parseString := '123matchstring'.

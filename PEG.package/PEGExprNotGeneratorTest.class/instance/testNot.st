@@ -5,7 +5,7 @@ testNot
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.
 	notGenerator := PEGExprNotGenerator new: stringGenerator.
 
-	notGenerator compile: #rule into: parserClass.
+	notGenerator compile: #parse_rule into: parserClass.
 
 	parser := parserClass new.
 	

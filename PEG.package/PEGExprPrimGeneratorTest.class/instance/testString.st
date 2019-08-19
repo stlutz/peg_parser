@@ -3,7 +3,7 @@ testString
 	| stringGenerator parser parseString parseResult |
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.
 	
-	stringGenerator compile: #rule into: parserClass.
+	stringGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123matchstring'.
 	

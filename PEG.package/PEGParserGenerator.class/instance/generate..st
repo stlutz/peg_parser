@@ -1,13 +1,19 @@
 as yet unclassified
 generate: aGrammarName
 	| parserClass |
-	parserClass := Object subclass: ('PEGParser' , aGrammarName) asSymbol
+	parserClass := PEGParser subclass: ('PEGParser' , aGrammarName) asSymbol
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
 		category: 'PEG-ParserGenerator-Parsers'.
-	
+
 	rules keysAndValuesDo: [:ruleName :exprGenerator |
-		exprGenerator compile: ruleName asSymbol into: parserClass].
+		| methodName childName methodString |
+		methodName := 'parse_' , ruleName.
+		childName := PEGExprGenerator childName: methodName.
+		childName := exprGenerator compile: childName asSymbol into: parserClass.
+
+		methodString := (PEGExprGenerator methodHead: methodName) , Character lf , '^self ' , childName , ': string atPos: pos'.
+		parserClass compileSilently: methodString].
 
 	^ parserClass

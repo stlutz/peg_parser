@@ -1,7 +1,7 @@
 as yet unclassified
 methodBodyMock
 	^ '| childResult |
-	childResult := self parse_{1}: string atPos: pos.
+	childResult := self {1}: string atPos: pos.
 	^ childResult
 		ifNil: [
 			PEGAbstractSyntaxTreeNode new

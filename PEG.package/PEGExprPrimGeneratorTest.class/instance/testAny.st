@@ -3,7 +3,7 @@ testAny
 	| anyGenerator parser parseString parseResult |
 	anyGenerator := PEGExprAnyGenerator new.
 	
-	anyGenerator compile: #rule into: parserClass.
+	anyGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := 'a'.
 	

@@ -1,7 +1,7 @@
 as yet unclassified
 compile: aName into: aClass
 	| methodString methodIdentifier method |
-	methodString := (self methodHead: aName asString) , Character lf , self class methodBodyMock.
+	methodString := (self class methodHead: aName asString) , Character lf , self class methodBodyMock.
 	methodIdentifier := aClass compileSilently: methodString.
 	method := aClass methodDict at: methodIdentifier.
 	
@@ -11,3 +11,5 @@ compile: aName into: aClass
 		(literalDict includesKey: literal)
 			ifTrue: [
 				method objectAt: index + 1 put: (literalDict at: literal)]].
+
+	^ aName

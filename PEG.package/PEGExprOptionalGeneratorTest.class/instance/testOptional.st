@@ -4,7 +4,7 @@ testOptional
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.
 	optionalGenerator := PEGExprOptionalGenerator new: stringGenerator.
 	
-	optionalGenerator compile: #rule into: parserClass.
+	optionalGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123matchstring'.
 	

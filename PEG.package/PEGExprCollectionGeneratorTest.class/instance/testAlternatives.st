@@ -6,7 +6,7 @@ testAlternatives
 	rangeGenerator := PEGExprRangeGenerator newFrom: $4 to: $9.
 	alternativesGenerator := PEGExprAlternativesGenerator new: {stringGenerator . rangeGenerator}.
 	
-	alternativesGenerator compile: #rule into: parserClass.
+	alternativesGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123456matchstring123test'.
 	

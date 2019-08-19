@@ -4,7 +4,7 @@ testZeroOrMore
 	rangeGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.
 	zeroOrMoreGenerator := PEGExprZeroOrMoreGenerator new: rangeGenerator.
 	
-	zeroOrMoreGenerator compile: #rule into: parserClass.
+	zeroOrMoreGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
 	parseString := '123abc123456'.
 	

@@ -4,7 +4,7 @@ methodBodyMock
 	currentPos := pos.
 	children := OrderedCollection new.
 	[
-		currentResult := self parse_{1}: string atPos: currentPos.
+		currentResult := self {1}: string atPos: currentPos.
 		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: childNode]

@@ -14,8 +14,8 @@ testTrickyGrammar
 		poolDictionaries: ''
 		category: categoryName.
 
-	(g alt: {g seq: {g string: 'a' . g apply: #A . g string: 'b'} . g string: 'ab'}) compile: #A into: parserClass.
-	(g alt: {g seq: {g string: 'b' . g apply: #B . g string: 'c'} . g string: 'bc'}) compile: #B into: parserClass.
+	(g alt: {g seq: {g string: 'a' . g apply: #A . g string: 'b'} . g string: 'ab'}) compile: #parse_A into: parserClass.
+	(g alt: {g seq: {g string: 'b' . g apply: #B . g string: 'c'} . g string: 'bc'}) compile: #parse_B into: parserClass.
 	(g alt: {
 		g not: g any .
 		g seq: {
@@ -24,7 +24,7 @@ testTrickyGrammar
 			g apply: #B .
 			g not: g any
 		}
-	}) compile: #D into: parserClass.
+	}) compile: #parse_D into: parserClass.
 	
 	parser := parserClass new.
 	parseResult := parser parse_D: 'abc' atPos: 1.
