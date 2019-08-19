@@ -7,4 +7,6 @@ methodBodyMock
 				startPos: pos;
 				endPos: pos + 1;
 				yourself]
-		ifFalse: [nil]'
+		ifFalse: [
+			self reportFailureOf: #any at: pos.
+			nil]'

@@ -8,6 +8,7 @@ testNot
 	notGenerator compile: #parse_rule into: parserClass.
 
 	parser := parserClass new.
+	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	
 	parseString := '123matchstring'.
 	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 1}.

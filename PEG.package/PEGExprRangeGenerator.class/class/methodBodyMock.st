@@ -9,4 +9,6 @@ methodBodyMock
 				startPos: pos;
 				endPos: pos + 1;
 				yourself]
-		ifFalse: [nil]'
+		ifFalse: [
+			self reportFailureOf: #range at: pos.
+			nil]'

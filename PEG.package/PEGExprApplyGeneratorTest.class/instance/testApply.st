@@ -23,6 +23,7 @@ testApply
 	cGenerator compile: #parse_C into: parserClass.
 
 	parser := parserClass new.
+	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := '123matchstring'.
 	
 	parseResult := parser perform: #parse_A:atPos: withArguments: {parseString . 1}.

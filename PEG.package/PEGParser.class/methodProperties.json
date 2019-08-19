@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"parse:startingFrom:" : "fs 8/19/2019 14:38" } }
+		"parse:startingFrom:" : "fs 8/19/2019 15:54",
+		"reportFailureOf:at:" : "fs 8/19/2019 15:58",
+		"rightmostFailure" : "fs 8/19/2019 16:50",
+		"rightmostFailure:" : "fs 8/19/2019 16:50" } }

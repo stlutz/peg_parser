@@ -5,6 +5,7 @@ testRange
 	
 	rangeGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
+	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := '123456789abc'.
 	
 	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 1}.

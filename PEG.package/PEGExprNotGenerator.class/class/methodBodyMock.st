@@ -9,4 +9,6 @@ methodBodyMock
 				startPos: pos;
 				endPos: pos;
 				yourself]
-		ifNotNil: [nil]'
+		ifNotNil: [
+			self reportFailureOf: #not at: pos.
+			nil]'

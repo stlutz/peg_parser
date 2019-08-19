@@ -8,7 +8,7 @@ testTrickyGrammar
 	| g parserClass parser parseResult|
 	g := PEGParserGenerator new.
 
-	parserClass := Object subclass: #TrickyGrammar
+	parserClass := PEGParser subclass: #TrickyGrammar
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
@@ -27,22 +27,22 @@ testTrickyGrammar
 	}) compile: #parse_D into: parserClass.
 	
 	parser := parserClass new.
-	parseResult := parser parse_D: 'abc' atPos: 1.
+	parseResult := parser parse: 'abc' startingFrom: #D.
 	self assert: parseResult startPos equals: 1.
 	self assert: parseResult endPos equals: 4.
-	parseResult := parser parse_D: 'aaabbbccc' atPos: 1.
+	parseResult := parser parse: 'aaabbbccc' startingFrom: #D.
 	self assert: parseResult startPos equals: 1.
 	self assert: parseResult endPos equals: 10.
 	
-	parseResult := parser parse_D: 'aabbbccc' atPos: 1.
+	parseResult := parser parse: 'aabbbccc' startingFrom: #D.
 	self assert: parseResult equals: nil.
-	parseResult := parser parse_D: 'aaabbccc' atPos: 1.
+	parseResult := parser parse: 'aaabbccc' startingFrom: #D.
 	self assert: parseResult equals: nil.
-	parseResult := parser parse_D: 'aaabbbcc' atPos: 1.
+	parseResult := parser parse: 'aaabbbcc' startingFrom: #D.
 	self assert: parseResult equals: nil.
-	parseResult := parser parse_D: 'aaaabbbccc' atPos: 1.
+	parseResult := parser parse: 'aaaabbbccc' startingFrom: #D.
 	self assert: parseResult equals: nil.
-	parseResult := parser parse_D: 'aaabbbbccc' atPos: 1.
+	parseResult := parser parse: 'aaabbbbccc' startingFrom: #D.
 	self assert: parseResult equals: nil.
-	parseResult := parser parse_D: 'aaabbbcccc' atPos: 1.
+	parseResult := parser parse: 'aaabbbcccc' startingFrom: #D.
 	self assert: parseResult equals: nil.

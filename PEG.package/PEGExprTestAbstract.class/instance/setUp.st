@@ -7,7 +7,7 @@ setUp
 	categoryName := 'PEG-ParserGenerators-Testclasses'.
 	parserName := 'PEGParser' , randomString.
 
-	parserClass := Object subclass: parserName asSymbol
+	parserClass := PEGParser subclass: parserName asSymbol
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''

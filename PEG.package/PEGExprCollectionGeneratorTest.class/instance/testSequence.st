@@ -17,6 +17,7 @@ testSequence
 	
 	sequenceGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
+	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := 'test test: 123 123: Test: test_2123abc: 1'. "word positions: 1 6 12 16 21 27 41"
 	
 	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 1}.

@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memoization",
-		"rightmostFailure" ],
-	"name" : "PEGParser",
+		"pos",
+		"rules" ],
+	"name" : "PEGParserFailure",
 	"pools" : [
 		 ],
 	"super" : "Object",
