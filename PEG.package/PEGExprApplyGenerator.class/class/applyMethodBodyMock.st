@@ -1,5 +1,5 @@
 as yet unclassified
-methodBodyMock
+applyMethodBodyMock
 	^ '| childResult |
 	childResult := self {1}: string atPos: pos.
 	^ childResult

@@ -2,7 +2,7 @@ as yet unclassified
 compile: aName into: aClass
 	| childName methodString methodIdentifier method |
 	childName := self class childName: aName.
-	childName := childGenerator compile: childName into: aClass.
+	childGenerator compile: childName into: aClass.
 	
 	methodString := (self class methodHead: aName asString) , Character lf , self class methodBodyMock.
 	methodString := methodString format: {childName}.
@@ -14,6 +14,4 @@ compile: aName into: aClass
 		literal := method objectAt: index + 1.
 		literal == #minSize
 			ifTrue: [
-				method objectAt: index + 1 put: minSize]].
-
-	^ aName
+				method objectAt: index + 1 put: minSize]]

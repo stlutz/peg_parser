@@ -10,6 +10,4 @@ compile: aName into: aClass
 		literal := method objectAt: index + 1.
 		(literalDict includesKey: literal)
 			ifTrue: [
-				method objectAt: index + 1 put: (literalDict at: literal)]].
-
-	^ aName
+				method objectAt: index + 1 put: (literalDict at: literal)]]
