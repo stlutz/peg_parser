@@ -8,6 +8,7 @@ methodBodyMock
 				rule: self;
 				startPos: pos;
 				endPos: pos;
+				children: OrderedCollection new;
 				yourself]
 		ifNotNil: [
 			self reportFailureOf: #not at: pos.

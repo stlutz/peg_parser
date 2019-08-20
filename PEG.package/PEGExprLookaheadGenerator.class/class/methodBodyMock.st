@@ -9,5 +9,5 @@ methodBodyMock
 				rule: self;
 				startPos: pos;
 				endPos: pos;
-				children: (Array with: childResult);
+				children: childResult nodeList;
 				yourself]'

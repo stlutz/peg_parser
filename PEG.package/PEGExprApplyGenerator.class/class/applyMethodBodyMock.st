@@ -10,5 +10,5 @@ applyMethodBodyMock
 					rule: #apply;
 					startPos: pos;
 					endPos: childResult endPos;
-					children: (Array with: childResult);
+					children: childResult nodeList;
 					yourself ] ]'

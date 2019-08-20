@@ -7,7 +7,7 @@ methodBodyMock
 		currentResult := self {1}: string atPos: currentPos.
 		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
-			children add: childNode]
+			children add: currentResult]
 	] doWhileTrue: [(currentResult == nil) not].
 
 	^ children size >= #minSize
@@ -16,6 +16,6 @@ methodBodyMock
 				rule: #many;
 				startPos: pos;
 				endPos: currentPos;
-				children: children asArray;
+				children: (children collect: #nodeList) flatten asOrderedCollection;
 				yourself]
 		ifFalse: [nil]'

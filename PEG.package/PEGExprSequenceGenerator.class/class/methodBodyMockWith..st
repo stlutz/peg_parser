@@ -14,7 +14,7 @@ methodBodyMockWith: childCount
 		rule: #sequence;
 		startPos: pos;
 		endPos: currentPos;
-		children: children;
+		children: (children collect: #nodeList) flatten;
 		yourself'.
 
 	code := headerCode , Character lf , Character lf.

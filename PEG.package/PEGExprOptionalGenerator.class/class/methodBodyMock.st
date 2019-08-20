@@ -8,12 +8,12 @@ methodBodyMock
 				rule: #optional;
 				startPos: pos;
 				endPos: pos;
-				children: (Array new: 0);
+				children: OrderedCollection new;
 				yourself]
 		ifNotNil: [
 			PEGAbstractSyntaxTreeNode new
 				rule: #optional;
 				startPos: pos;
 				endPos: childResult endPos;
-				children: (Array with: childResult);
+				children: childResult nodeList;
 				yourself]'

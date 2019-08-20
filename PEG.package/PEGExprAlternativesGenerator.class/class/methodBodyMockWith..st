@@ -9,7 +9,7 @@ methodBodyMockWith: childCount
 				rule: #alternatives;
 				startPos: pos;
 				endPos: childResult endPos;
-				children: (Array with: childResult);
+				children: childResult nodeList;
 				yourself].'.
 	postCode := '^ nil'.
 
