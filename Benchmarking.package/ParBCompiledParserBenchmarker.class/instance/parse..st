@@ -1,3 +1,3 @@
 as yet unclassified
 parse: string
-	^ parser parse_MethodDeclaration: string atPos: 1
+	^ parser parse: string startingFrom: #MethodDeclaration
