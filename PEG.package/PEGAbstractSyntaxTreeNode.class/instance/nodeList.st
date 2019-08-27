@@ -1,3 +1,3 @@
 as yet unclassified
 nodeList
-	^ {self}
+	^ OrderedCollection with: self

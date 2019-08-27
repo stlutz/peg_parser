@@ -16,6 +16,6 @@ methodBodyMock
 				rule: #many;
 				startPos: pos;
 				endPos: currentPos;
-				children: (children collect: #nodeList) flatten asOrderedCollection;
+				children: (children collect: #nodeList) flatten;
 				yourself]
 		ifFalse: [nil]'
