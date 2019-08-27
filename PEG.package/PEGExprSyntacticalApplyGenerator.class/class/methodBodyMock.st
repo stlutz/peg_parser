@@ -1,8 +1,9 @@
 as yet unclassified
-applyMethodBodyMock
+methodBodyMock
 	^ '^ (memoization at: pos ifAbsent: [^ nil]) at: #{1} ifAbsentPut: [
-		| childResult |
-		childResult := self {1}: string atPos: pos.
+		| skipPos childResult |
+		skipPos := self skipSpaces: string atPos:pos.
+		childResult := self {1}: string atPos: skipPos.
 		childResult
 			ifNil: [nil]
 			ifNotNil: [

@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"minSize" ],
-	"name" : "PEGExprManyGenerator",
+		 ],
+	"name" : "PEGExprLexicalZeroOrMoreGenerator",
 	"pools" : [
 		 ],
 	"super" : "PEGExprWrapperGenerator",

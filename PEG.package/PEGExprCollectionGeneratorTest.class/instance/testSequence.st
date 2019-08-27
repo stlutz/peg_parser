@@ -6,9 +6,9 @@ testSequence
 	':' .. rule_3"
 	| sequenceGenerator parser parseString parseResult |
 	
-	sequenceGenerator := PEGExprSequenceGenerator new: {
+	sequenceGenerator := PEGExprLexicalSequenceGenerator new: {
 		PEGExprRangeGenerator newFrom: $A to: $z .
-		PEGExprZeroOrMoreGenerator new: (
+		PEGExprLexicalZeroOrMoreGenerator new: (
 			PEGExprAlternativesGenerator new: {
 				PEGExprRangeGenerator newFrom: $A to: $z .
 				PEGExprRangeGenerator newFrom: $0 to: $9 .

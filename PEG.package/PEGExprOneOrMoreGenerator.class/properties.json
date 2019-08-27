@@ -10,5 +10,5 @@
 	"name" : "PEGExprOneOrMoreGenerator",
 	"pools" : [
 		 ],
-	"super" : "PEGExprManyGenerator",
+	"super" : "AnObsoletePEGExprManyGenerator",
 	"type" : "normal" }

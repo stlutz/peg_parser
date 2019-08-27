@@ -11,9 +11,9 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 		^ g alt: childGenerators].
 	
 	actions at: OhmPExprApply put: [
-		isSyntactic
-			ifTrue: [^ g seq: {g apply: #spaces . g apply: anOhmExpr ruleName}]
-			ifFalse: [^ g apply: anOhmExpr ruleName]].
+		^ isSyntactic
+			ifTrue: [g synapply: anOhmExpr ruleName]
+			ifFalse: [g lexapply: anOhmExpr ruleName]].
 
 	actions at: OhmPExprLookahead put: [
 		^ g and: (self convertExpr: anOhmExpr term isSyntactic: isSyntactic)].
@@ -22,8 +22,17 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 		^ g not: (self convertExpr: anOhmExpr term isSyntactic: isSyntactic)].
 
 	actions at: OhmPExprMany put: [
-		anOhmExpr min == 0 ifTrue: [^ g star: (self convertExpr: anOhmExpr term isSyntactic: isSyntactic)].
-		anOhmExpr min = 1 ifTrue: [^ g plus: (self convertExpr: anOhmExpr term isSyntactic: isSyntactic)].
+		| convertedChildExpr |
+		convertedChildExpr := self convertExpr: anOhmExpr term isSyntactic: isSyntactic.
+
+		anOhmExpr min = 0 ifTrue: [
+			^ isSyntactic
+				ifTrue: [^ g synstar: convertedChildExpr]
+				ifFalse: [^ g lexstar: convertedChildExpr]].
+		anOhmExpr min = 1 ifTrue: [
+			^ isSyntactic
+				ifTrue: [^ g synplus: convertedChildExpr]
+				ifFalse: [^ g lexplus: convertedChildExpr]].
 		self error: 'Min has to be 0 or 1.'].
 
 	actions at: OhmPExprOpt put: [
@@ -40,9 +49,10 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 
 	actions at: OhmPExprSeq put: [
 		| childGenerators |
-		childGenerators := isSyntactic
-			ifTrue: [(anOhmExpr terms collect: [:childExpr | {g apply: #spaces . self convertExpr: childExpr isSyntactic: isSyntactic}]) flatten]
-			ifFalse: [anOhmExpr terms collect: [:childExpr | self convertExpr: childExpr isSyntactic: isSyntactic]].
-		^ g seq: childGenerators].
+		childGenerators := anOhmExpr terms collect: [:childExpr | self convertExpr: childExpr isSyntactic: isSyntactic].
+		^ isSyntactic
+			ifTrue: [^ g synseq: childGenerators]
+			ifFalse: [^ g lexseq: childGenerators]].
+
 
 	(actions at: anOhmExpr class) value

@@ -8,8 +8,7 @@ generate: aGrammarName
 		category: 'PEG-ParserGenerator-Parsers'.
 
 	rules keysAndValuesDo: [:ruleName :exprGenerator |
-		| methodName |
-		methodName := 'parse_' , ruleName.
-		exprGenerator compile: methodName asSymbol into: parserClass].
+		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
+		(PEGExprApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
 
 	^ parserClass

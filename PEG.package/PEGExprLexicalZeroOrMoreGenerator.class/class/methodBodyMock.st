@@ -10,12 +10,9 @@ methodBodyMock
 			children add: currentResult]
 	] doWhileTrue: [(currentResult == nil) not].
 
-	^ children size >= #minSize
-		ifTrue: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #many;
-				startPos: pos;
-				endPos: currentPos;
-				children: (children collect: #nodeList) flatten;
-				yourself]
-		ifFalse: [nil]'
+	^ PEGAbstractSyntaxTreeNode new
+		rule: #zeroOrMore;
+		startPos: pos;
+		endPos: currentPos;
+		children: (children collect: #nodeList) flatten;
+		yourself'

@@ -5,4 +5,5 @@
 		"parse:startingFrom:" : "fs 8/19/2019 15:54",
 		"reportFailureOf:at:" : "fs 8/19/2019 15:58",
 		"rightmostFailure" : "fs 8/19/2019 16:50",
-		"rightmostFailure:" : "fs 8/19/2019 16:50" } }
+		"rightmostFailure:" : "fs 8/19/2019 16:50",
+		"skipSpaces:atPos:" : "fs 8/27/2019 10:56" } }

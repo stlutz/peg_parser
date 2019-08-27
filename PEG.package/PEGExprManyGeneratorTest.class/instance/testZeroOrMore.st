@@ -2,7 +2,7 @@ as yet unclassified
 testZeroOrMore
 	| rangeGenerator zeroOrMoreGenerator parser parseString parseResult |
 	rangeGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.
-	zeroOrMoreGenerator := PEGExprZeroOrMoreGenerator new: rangeGenerator.
+	zeroOrMoreGenerator := PEGExprLexicalZeroOrMoreGenerator new: rangeGenerator.
 	
 	zeroOrMoreGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.

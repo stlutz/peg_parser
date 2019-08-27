@@ -1,3 +1,3 @@
 as yet unclassified
 apply: aRuleName
-	^ PEGExprApplyGenerator newWithRule: aRuleName
+	^ self lexapply: aRuleName

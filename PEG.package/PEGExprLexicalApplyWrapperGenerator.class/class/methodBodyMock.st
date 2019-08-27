@@ -1,3 +1,3 @@
 as yet unclassified
-wrapperMethodBodyMock
+methodBodyMock
 	^ '^ self {1}: string atPos: pos'
