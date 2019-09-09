@@ -14,6 +14,7 @@ testTrickyGrammar
 		poolDictionaries: ''
 		category: categoryName.
 
+	"Build Grammar"
 	(g alt: {g seq: {g string: 'a' . g apply: #A . g string: 'b'} . g string: 'ab'}) compile: #parse_A into: parserClass.
 	(g alt: {g seq: {g string: 'b' . g apply: #B . g string: 'c'} . g string: 'bc'}) compile: #parse_B into: parserClass.
 	(g alt: {
@@ -25,6 +26,10 @@ testTrickyGrammar
 			g not: g any
 		}
 	}) compile: #parse_D into: parserClass.
+	"Add Applys"
+	(PEGExprApplyGenerator newWithRule: #A) compile: 'apply_A' into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #B) compile: 'apply_B' into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #D) compile: 'apply_D' into: parserClass.
 	
 	parser := parserClass new.
 	parseResult := parser parse: 'abc' startingFrom: #D.

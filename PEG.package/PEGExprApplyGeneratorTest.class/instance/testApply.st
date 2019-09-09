@@ -6,9 +6,9 @@ testApply
 	C = 'test'
 	"
 	| applyAGenerator applyBGenerator applyCGenerator aGenerator bGenerator cGenerator parser parseString parseResult |
-	applyAGenerator := PEGExprLexicalApplyGenerator newWithRule: #A.
-	applyBGenerator := PEGExprLexicalApplyGenerator newWithRule: #B.
-	applyCGenerator := PEGExprLexicalApplyGenerator newWithRule: #C.
+	applyAGenerator := PEGExprApplyGenerator newWithRule: #A.
+	applyBGenerator := PEGExprApplyGenerator newWithRule: #B.
+	applyCGenerator := PEGExprApplyGenerator newWithRule: #C.
 	
 	aGenerator := PEGExprStringGenerator newString: 'matchstring'.
 	bGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.
