@@ -2,8 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"parse:startingFrom:" : "fs 8/19/2019 15:54",
+		"parse:startingFrom:" : "fs 9/9/2019 20:03",
+		"recall:withRule:atPos:" : "fs 9/9/2019 20:07",
 		"reportFailureOf:at:" : "fs 8/19/2019 15:58",
 		"rightmostFailure" : "fs 8/19/2019 16:50",
 		"rightmostFailure:" : "fs 8/19/2019 16:50",
-		"skipSpaces:atPos:" : "fs 8/27/2019 10:56" } }
+		"setup:withDetectedLeftRecursion:" : "fs 9/9/2019 20:08",
+		"skipSpaces:atPos:" : "fs 9/9/2019 20:07" } }

@@ -6,11 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memoization",
-		"heads",
-		"leftRecursionStack",
-		"rightmostFailure" ],
-	"name" : "PEGParser",
+		"ruleName",
+		"involvedSet",
+		"evalSet" ],
+	"name" : "PEGLeftRecursionHead",
 	"pools" : [
 		 ],
 	"super" : "Object",
