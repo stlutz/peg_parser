@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGExprLeftRecursiveApplyGeneratorTest",
+	"pools" : [
+		 ],
+	"super" : "PEGExprTestAbstract",
+	"type" : "normal" }
