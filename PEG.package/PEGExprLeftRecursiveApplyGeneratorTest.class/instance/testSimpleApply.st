@@ -15,7 +15,23 @@ testSimpleApply
 	applyGenerator compile: #apply_a into: parserClass.
 	generator compile: #parse_a into: parserClass.
 	parser := parserClass new.
-	parseString := 'abb'.
-	
+
+	parseString := 'a'.
 	parseResult := parser parse: parseString startingFrom: #a.
-	self assert: parseResult endPos == 4
+	self assert: parseResult endPos == 2.
+
+	parseString := 'ab'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos == 3.
+
+	parseString := 'abb'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos == 4.
+
+	parseString := 'abbb'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos == 5.
+
+	parseString := 'abbbb'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos == 6.

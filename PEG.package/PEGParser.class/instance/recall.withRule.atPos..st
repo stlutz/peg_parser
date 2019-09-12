@@ -14,7 +14,7 @@ recall: string withRule: ruleName atPos: pos
 			| result |
 			head evalSet remove: ruleName.
 			result := self perform: (ruleName , ':atPos:') asSymbol withArguments: {string . pos}.
-			memoization at: pos put: result.
+			(memoization at: pos) at: ruleName put: result.
 			^ result].
 	
 	^ memoizationResult

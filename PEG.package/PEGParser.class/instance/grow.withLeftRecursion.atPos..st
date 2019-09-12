@@ -9,7 +9,9 @@ grow: string withLeftRecursion: leftRecursion atPos: pos
 		currentResult := self perform: (leftRecursion ruleName , ':atPos:') asSymbol withArguments: {string . pos}.
 		(currentResult == nil or: [currentResult endPos <= result endPos])
 			ifTrue: [growing := false]
-			ifFalse: [result := currentResult]
+			ifFalse: [
+				result := currentResult.
+				(memoization at: pos) at: leftRecursion ruleName put: currentResult]
 	] doWhileTrue: [growing].
 
 	heads at: pos put: nil.

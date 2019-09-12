@@ -32,6 +32,19 @@ testApply
 	cGenerator compile: #parse_c into: parserClass.
 
 	parser := parserClass new.
+
 	parseString := '_bccb'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos equals: 6.
+
+	parseString := '_bccbcc'.
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos equals: 8.
 	
-	parseResult := parser parse: parseString startingFrom: #a
+	parseString := '_cb'.	
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult endPos equals: 4.
+
+	parseString := 'c_cb'.	
+	parseResult := parser parse: parseString startingFrom: #a.
+	self assert: parseResult equals: nil.
