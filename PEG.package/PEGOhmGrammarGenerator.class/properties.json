@@ -8,7 +8,7 @@
 	"instvars" : [
 		"grammar",
 		"builder" ],
-	"name" : "PEGOhmGrammarConverter",
+	"name" : "PEGOhmGrammarGenerator",
 	"pools" : [
 		 ],
 	"super" : "Object",

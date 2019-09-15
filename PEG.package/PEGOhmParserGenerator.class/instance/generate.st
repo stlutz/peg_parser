@@ -1,11 +1,16 @@
 as yet unclassified
 generate
-	generator := PEGParserGenerator new.
+	| superclass |
+	grammar == grammar superGrammar ifFalse: [
+		superclass := PEGOhmParserGenerator generateFrom: grammar superGrammar].
 
+	generator := PEGParserGenerator new.
 	grammar ruleDeclarations keysAndValuesDo: [:ruleName :ruleDefinition |
 		| expr convertedExpr |
 		expr := ruleDefinition body.
 		convertedExpr := self convertExpr: expr isSyntactic: (ruleName at: 1) isUppercase.
 		generator addRule: (ruleName asSymbol) withExpr: convertedExpr].
 	
-	^ generator generate: grammar grammarName
+	^ superclass
+		ifNil: [generator generate: grammar grammarName]
+		ifNotNil: [generator generate: grammar grammarName inheritFrom: superclass]

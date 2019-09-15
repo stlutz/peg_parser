@@ -279,4 +279,4 @@ digit := "0".."9"
 		OhmRuleDefine newNamed: #any parameters: #() body: (
 			OhmPExprAnything new)).
 
-	^ (PEGOhmGrammarConverter new: grammar) result
+	^ (PEGOhmGrammarGenerator new: grammar) result

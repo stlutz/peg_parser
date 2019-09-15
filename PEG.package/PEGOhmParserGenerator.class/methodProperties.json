@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"new:" : "fs 8/9/2019 16:11" },
+		"generateFrom:" : "fs 9/15/2019 14:48" },
 	"instance" : {
-		"convertExpr:isSyntactic:" : "fs 8/27/2019 13:42",
-		"generate" : "fs 8/9/2019 16:12",
+		"convertExpr:isSyntactic:" : "fs 9/15/2019 17:38",
+		"generate" : "fs 9/15/2019 17:44",
 		"grammar:" : "fs 8/9/2019 15:50" } }

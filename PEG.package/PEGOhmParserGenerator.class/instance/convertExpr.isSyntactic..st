@@ -2,8 +2,9 @@ as yet unclassified
 convertExpr: anOhmExpr isSyntactic: isSyntactic
 	| g actions |
 	g := generator.
+	
+	"actions dict mimics a switch case"
 	actions := Dictionary new.
-
 	actions at: OhmPExprAlt put: [
 		| childGenerators |
 		childGenerators := anOhmExpr terms collect: [:childExpr |
@@ -53,6 +54,9 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 		^ isSyntactic
 			ifTrue: [^ g synseq: childGenerators]
 			ifFalse: [^ g lexseq: childGenerators]].
-
+	
+	"change these in the future"
+	actions at: OhmPExprParam put: [^ g any].
+	actions at: OhmPExprCaseInsensitive put: [^ g any].
 
 	(actions at: anOhmExpr class) value
