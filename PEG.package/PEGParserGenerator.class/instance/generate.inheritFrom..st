@@ -5,7 +5,7 @@ generate: aGrammarName inheritFrom: superclass
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		category: 'PEG-ParserGenerator-Parsers'.
+		category: 'GeneratedPEGParsers'.
 
 	ruleDefinitions keysAndValuesDo: [:ruleName :exprGenerator |
 		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
