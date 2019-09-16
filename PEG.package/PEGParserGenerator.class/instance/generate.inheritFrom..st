@@ -7,8 +7,12 @@ generate: aGrammarName inheritFrom: superclass
 		poolDictionaries: ''
 		category: 'PEG-ParserGenerator-Parsers'.
 
-	rules keysAndValuesDo: [:ruleName :exprGenerator |
+	ruleDefinitions keysAndValuesDo: [:ruleName :exprGenerator |
 		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
 		(PEGExprApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
+	
+	ruleExtensions keysAndValuesDo: [:ruleName :exprGenerator |
+		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
+		(PEGExprApplyExtendGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
 
 	^ parserClass

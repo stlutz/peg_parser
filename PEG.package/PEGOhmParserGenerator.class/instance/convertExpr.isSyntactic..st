@@ -32,8 +32,8 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 				ifFalse: [^ g lexstar: convertedChildExpr]].
 		anOhmExpr min = 1 ifTrue: [
 			^ isSyntactic
-				ifTrue: [^ g synplus: convertedChildExpr]
-				ifFalse: [^ g lexplus: convertedChildExpr]].
+				ifTrue: [g synplus: convertedChildExpr]
+				ifFalse: [g lexplus: convertedChildExpr]].
 		self error: 'Min has to be 0 or 1.'].
 
 	actions at: OhmPExprOpt put: [
@@ -52,8 +52,8 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 		| childGenerators |
 		childGenerators := anOhmExpr terms collect: [:childExpr | self convertExpr: childExpr isSyntactic: isSyntactic].
 		^ isSyntactic
-			ifTrue: [^ g synseq: childGenerators]
-			ifFalse: [^ g lexseq: childGenerators]].
+			ifTrue: [g synseq: childGenerators]
+			ifFalse: [g lexseq: childGenerators]].
 	
 	"change these in the future"
 	actions at: OhmPExprParam put: [^ g any].

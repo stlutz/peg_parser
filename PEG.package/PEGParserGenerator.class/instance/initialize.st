@@ -1,3 +1,4 @@
 as yet unclassified
 initialize
-	rules := IdentityDictionary new.
+	ruleDefinitions := IdentityDictionary new.
+	ruleExtensions := IdentityDictionary new.

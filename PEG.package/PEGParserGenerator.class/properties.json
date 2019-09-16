@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"rules" ],
+		"ruleDefinitions",
+		"ruleExtensions" ],
 	"name" : "PEGParserGenerator",
 	"pools" : [
 		 ],

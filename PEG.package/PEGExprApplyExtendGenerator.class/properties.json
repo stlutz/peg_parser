@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator-Exprs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGExprApplyExtendGenerator",
+	"pools" : [
+		 ],
+	"super" : "PEGExprApplyGenerator",
+	"type" : "normal" }
