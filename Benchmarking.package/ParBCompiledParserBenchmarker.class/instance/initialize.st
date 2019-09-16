@@ -1,3 +1,5 @@
 as yet unclassified
 initialize
-	parser := (PEGGenerateSmalltalkGrammar go) new
+	| parserClass |
+	parserClass := PEGOhmParserGenerator generateFrom: OhmSmalltalk OhmInstance.
+	parser := parserClass new.
