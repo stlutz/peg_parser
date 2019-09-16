@@ -8,5 +8,5 @@ methodBodyMock
 				endPos: pos + 1;
 				yourself]
 		ifFalse: [
-			self reportFailureOf: #any at: pos.
+			self reportFailureAtPos: #any atPos: pos.
 			nil]'

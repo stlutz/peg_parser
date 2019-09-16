@@ -1,5 +1,5 @@
 as yet unclassified
-reportFailureOf: aRule at: pos
+reportFailureOf: aRule atPos: pos
 	pos < rightmostFailure pos ifTrue: [^ nil].
 
 	pos > self rightmostFailure pos ifTrue: [

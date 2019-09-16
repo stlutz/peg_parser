@@ -10,5 +10,5 @@ methodBodyMock
 				endPos: pos + 1;
 				yourself]
 		ifFalse: [
-			self reportFailureOf: #range at: pos.
+			self reportFailureOf: {#startChar . #endChar} atPos: pos.
 			nil]'

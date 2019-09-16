@@ -11,5 +11,5 @@ methodBodyMock
 				children: OrderedCollection new;
 				yourself]
 		ifNotNil: [
-			self reportFailureOf: #not at: pos.
+			self reportFailureOf: #not atPos: pos.
 			nil]'

@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"failure" ],
+	"name" : "PEGFailedMatchResult",
+	"pools" : [
+		 ],
+	"super" : "PEGMatchResult",
+	"type" : "normal" }
