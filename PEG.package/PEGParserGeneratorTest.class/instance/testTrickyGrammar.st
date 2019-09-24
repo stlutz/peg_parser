@@ -13,6 +13,10 @@ testTrickyGrammar
 		classVariableNames: ''
 		poolDictionaries: ''
 		category: categoryName.
+	
+	"Spaces"
+	(g star: (g string: ' ')) compile: #parse_spaces into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #spaces) compile: #apply_spaces into: parserClass.
 
 	"Build Grammar"
 	(g alt: {g seq: {g string: 'a' . g apply: #A . g string: 'b'} . g string: 'ab'}) compile: #parse_A into: parserClass.
@@ -27,27 +31,27 @@ testTrickyGrammar
 		}
 	}) compile: #parse_D into: parserClass.
 	"Add Applys"
-	(PEGExprApplyGenerator newWithRule: #A) compile: 'apply_A' into: parserClass.
-	(PEGExprApplyGenerator newWithRule: #B) compile: 'apply_B' into: parserClass.
-	(PEGExprApplyGenerator newWithRule: #D) compile: 'apply_D' into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #A) compile: #apply_A into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #B) compile: #apply_B into: parserClass.
+	(PEGExprApplyGenerator newWithRule: #D) compile: #apply_D into: parserClass.
 	
 	parser := parserClass new.
 	parseResult := parser parse: 'abc' startingFrom: #D.
-	self assert: parseResult startPos equals: 1.
-	self assert: parseResult endPos equals: 4.
+	self assert: parseResult cst startPos equals: 1.
+	self assert: parseResult cst endPos equals: 4.
 	parseResult := parser parse: 'aaabbbccc' startingFrom: #D.
-	self assert: parseResult startPos equals: 1.
-	self assert: parseResult endPos equals: 10.
+	self assert: parseResult cst startPos equals: 1.
+	self assert: parseResult cst endPos equals: 10.
 	
 	parseResult := parser parse: 'aabbbccc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
 	parseResult := parser parse: 'aaabbccc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
 	parseResult := parser parse: 'aaabbbcc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
 	parseResult := parser parse: 'aaaabbbccc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
 	parseResult := parser parse: 'aaabbbbccc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
 	parseResult := parser parse: 'aaabbbcccc' startingFrom: #D.
-	self assert: parseResult equals: nil.
+	self assert: parseResult failed equals: true.
