@@ -10,9 +10,5 @@ generate: aGrammarName inheritFrom: superclass
 	ruleDefinitions keysAndValuesDo: [:ruleName :exprGenerator |
 		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
 		(PEGExprApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
-	
-	ruleExtensions keysAndValuesDo: [:ruleName :exprGenerator |
-		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
-		(PEGExprApplyExtendGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
 
 	^ parserClass
