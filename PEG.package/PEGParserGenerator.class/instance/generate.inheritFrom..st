@@ -1,8 +1,10 @@
 as yet unclassified
 generate: aGrammarName inheritFrom: superclass
-	| parserClass |
+	| derivationGraph parserClass |
 	(superclass includesBehavior: PEGParser) ifFalse: [
 		self error: 'Class must inherit from PEGParser.'].
+	
+	derivationGraph := self buildDerivationGraph.
 	
 	parserClass := superclass subclass: ('PEGParser' , aGrammarName) asSymbol
 		instanceVariableNames: ''

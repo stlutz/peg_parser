@@ -1,7 +1,7 @@
 {
 	"category" : "PEG-ParserGenerator",
 	"classinstvars" : [
-		 ],
+		"derivationGraph" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
