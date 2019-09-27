@@ -1,7 +1,10 @@
 {
 	"category" : "PEG-ParserGenerator",
 	"classinstvars" : [
-		"derivationGraph" ],
+		"ruleDefinitions",
+		"derivationGraph",
+		"leftRecursiveIdentifiers",
+		"nonLeftRecursiveIdentifiers" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

@@ -1,6 +1,13 @@
 {
 	"class" : {
-		 },
+		"derivationGraph" : "fs 9/27/2019 14:40",
+		"derivationGraph:" : "fs 9/27/2019 14:40",
+		"leftRecursiveIdentifiers" : "fs 9/27/2019 16:00",
+		"leftRecursiveIdentifiers:" : "fs 9/27/2019 16:00",
+		"nonLeftRecursiveIdentifiers" : "fs 9/27/2019 16:00",
+		"nonLeftRecursiveIdentifiers:" : "fs 9/27/2019 16:00",
+		"ruleDefinitions" : "fs 9/27/2019 11:48",
+		"ruleDefinitions:" : "fs 9/27/2019 11:48" },
 	"instance" : {
 		"answer:withRule:withGrowableLeftRecursion:atPos:" : "fs 9/12/2019 11:03",
 		"grow:withLeftRecursion:atPos:" : "fs 9/12/2019 13:30",
