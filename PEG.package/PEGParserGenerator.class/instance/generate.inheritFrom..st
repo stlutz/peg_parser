@@ -15,7 +15,16 @@ generate: aGrammarName inheritFrom: superclass
 	self findLeftRecursiveIdentifiers: parserClass.
 	
 	ruleDefinitions keysAndValuesDo: [:ruleName :exprGenerator |
-		exprGenerator compile: ('parse_' , ruleName) into: parserClass.
-		(PEGExprApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass].
+		exprGenerator compile: ('parse_' , ruleName) into: parserClass].
+	
+	parserClass leftRecursiveIdentifiers do: [:ruleName |
+		(parserClass superclass leftRecursiveIdentifiers ~= nil and: [parserClass superclass leftRecursiveIdentifiers includes: ruleName])
+			ifFalse: [
+				(PEGExprLeftRecursiveApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass]].
+	
+	parserClass nonLeftRecursiveIdentifiers do: [:ruleName |
+		(parserClass superclass nonLeftRecursiveIdentifiers ~= nil and: [parserClass superclass nonLeftRecursiveIdentifiers includes: ruleName])
+			ifFalse: [
+				(PEGExprApplyGenerator newWithRule: ruleName) compile: ('apply_' , ruleName) into: parserClass]].
 
 	^ parserClass

@@ -102,10 +102,12 @@ findLeftRecursiveIdentifiers: parserClass
 	
 	(reduceGraphComponents select: [:set | set size > 1])
 	do: [:set |
-		(set select: [:expr | expr isKindOf: PEGExprLexicalApplyWrapperGenerator])
+		(set select: [:expr | expr isKindOf: PEGExprLexicalApplyWrapperGenerator]) "SyntacticalApplyWrapperGenerator inherits"
 		do: [:expr | parserClass leftRecursiveIdentifiers add: expr ruleName]].
 	
 	(reduceGraphComponents select: [:set | set size = 1])
 	do: [:set |
 		(set select: [:expr | expr isKindOf: PEGExprLexicalApplyWrapperGenerator])
-		do: [:expr | parserClass nonLeftRecursiveIdentifiers add: expr ruleName]]
+		do: [:expr |
+			(parserClass leftRecursiveIdentifiers includes: expr ruleName) ifFalse:
+				[parserClass nonLeftRecursiveIdentifiers add: expr ruleName]]] "SyntacticalApplyWrapperGenerator inherits"
