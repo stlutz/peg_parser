@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"newWith:with:with:" : "fs 9/30/2019 16:51" },
+	"instance" : {
+		"addToDerivationGraph:" : "fs 9/30/2019 19:01",
+		"addToDerivationGraph:withName:" : "fs 10/2/2019 10:47",
+		"addToLeftRecursionGraph:" : "fs 9/30/2019 19:09",
+		"addToLeftRecursionGraph:withName:" : "fs 10/2/2019 11:53",
+		"buildDerivationGraph" : "fs 9/30/2019 19:22",
+		"buildLeftRecursionGraph" : "fs 10/2/2019 11:53",
+		"classIdentifier" : "fs 9/30/2019 16:54",
+		"extractRuleIdentifiers" : "fs 9/30/2019 19:18",
+		"getRuleDefinitionFrom:with:" : "fs 9/30/2019 17:10",
+		"grammarName:" : "fs 9/30/2019 16:50",
+		"reduceDerivationGraph" : "fs 10/2/2019 11:52",
+		"result" : "fs 10/2/2019 11:45",
+		"ruleDefinitions:" : "fs 9/30/2019 16:50",
+		"superclass:" : "fs 9/30/2019 16:50" } }

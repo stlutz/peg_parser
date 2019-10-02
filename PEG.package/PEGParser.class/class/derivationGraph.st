@@ -1,4 +1,0 @@
-accessing
-derivationGraph
-
-	^ derivationGraph

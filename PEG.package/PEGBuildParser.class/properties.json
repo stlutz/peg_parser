@@ -1,0 +1,19 @@
+{
+	"category" : "PEG-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ruleDefinitions",
+		"grammarName",
+		"superclass",
+		"parserClass",
+		"derivationGraph",
+		"leftRecursionGraph" ],
+	"name" : "PEGBuildParser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
