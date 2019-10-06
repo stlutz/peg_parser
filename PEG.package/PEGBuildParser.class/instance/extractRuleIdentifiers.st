@@ -9,12 +9,14 @@ extractRuleIdentifiers
 	
 	(connectedComponents select: [:set | set size > 1])
 	do: [:set |
-		(set select: [:expr | expr isKindOf: PEGExprLexicalApplyWrapperGenerator]) "SyntacticalApplyWrapperGenerator inherits"
-		do: [:expr | parserClass leftRecursiveIdentifiers add: expr ruleName]].
+		(set collect: [:expr | leftRecursionGraph nodeData: expr at: #name])
+		do: [:identifier |
+			identifier ifNotNil: [parserClass leftRecursiveIdentifiers add: identifier]]].
 	
 	(connectedComponents select: [:set | set size = 1])
 	do: [:set |
-		(set select: [:expr | expr isKindOf: PEGExprLexicalApplyWrapperGenerator]) "SyntacticalApplyWrapperGenerator inherits"
-		do: [:expr |
-			(parserClass leftRecursiveIdentifiers includes: expr ruleName) ifFalse:
-				[parserClass nonLeftRecursiveIdentifiers add: expr ruleName]]]
+		(set collect: [:expr | leftRecursionGraph nodeData: expr at: #name])
+		do: [:identifier |
+			identifier ifNotNil: [
+				(parserClass leftRecursiveIdentifiers includes: identifier) ifFalse: [
+					parserClass nonLeftRecursiveIdentifiers add: identifier]]]]

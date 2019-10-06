@@ -9,7 +9,7 @@
 		"buildDerivationGraph" : "fs 9/30/2019 19:22",
 		"buildLeftRecursionGraph" : "fs 10/2/2019 11:53",
 		"classIdentifier" : "fs 9/30/2019 16:54",
-		"extractRuleIdentifiers" : "fs 9/30/2019 19:18",
+		"extractRuleIdentifiers" : "fs 10/6/2019 15:00",
 		"getRuleDefinitionFrom:with:" : "fs 9/30/2019 17:10",
 		"grammarName:" : "fs 9/30/2019 16:50",
 		"reduceDerivationGraph" : "fs 10/2/2019 11:52",
