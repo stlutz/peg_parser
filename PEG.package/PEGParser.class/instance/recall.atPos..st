@@ -1,5 +1,5 @@
 as yet unclassified
-recall: string withRule: ruleName atPos: pos
+recall: ruleName atPos: pos
 	| memoizationResult head |
 	memoizationResult := (memoization at: pos ifAbsent: [^nil]) at: ruleName ifAbsent: [nil].
 	head := heads at: pos.
@@ -13,7 +13,7 @@ recall: string withRule: ruleName atPos: pos
 		ifTrue: [
 			| result |
 			head evalSet remove: ruleName.
-			result := self perform: (ruleName , ':atPos:') asSymbol withArguments: {string . pos}.
+			result := self perform: (ruleName , ':') asSymbol with: pos.
 			(memoization at: pos) at: ruleName put: result.
 			^ result].
 	

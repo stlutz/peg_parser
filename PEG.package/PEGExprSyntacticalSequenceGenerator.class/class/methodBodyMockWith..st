@@ -4,8 +4,8 @@ methodBodyMockWith: childCount
 	headerCode := '| currentPos currentResult children |
 	currentPos := pos.
 	children := OrderedCollection new: ' , childCount , '.'.
-	elementCode := 'currentPos := self skipSpaces: string atPos: currentPos.
-	currentResult := self {1}: string atPos: currentPos.
+	elementCode := 'currentPos := self skipSpaces: currentPos.
+	currentResult := self {1}: currentPos.
 	currentResult
 		ifNil: [^ nil]
 		ifNotNil: [

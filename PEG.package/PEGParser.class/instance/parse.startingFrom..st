@@ -1,19 +1,19 @@
 as yet unclassified
-parse: string startingFrom: ruleName
+parse: parseString startingFrom: ruleName
 	| methodSignature parseResult |
-	memoization := (1 to: string size) collect: [:index | IdentityDictionary new].
-	heads := Array new: string size.
+	string := parseString.
+	memoization := (1 to: parseString size) collect: [:index | IdentityDictionary new].
+	heads := Array new: parseString size.
 	leftRecursionStack := LinkedList new.
 	rightmostFailure := PEGParserFailure newAt: 0.
 	
-	methodSignature := ('apply_' , ruleName , ':atPos:') asSymbol.
-	parseResult := self perform: methodSignature withArguments: {string . 1}.
-	
-	
-	
+	methodSignature := ('apply_' , ruleName , ':') asSymbol.
+	parseResult := self perform: methodSignature with: 1.
+
+
 	parseResult == nil ifFalse: [
 		| endPos |
-		endPos := self skipSpaces: string atPos: parseResult endPos.
+		endPos := self skipSpaces: parseResult endPos.
 		endPos == (string size + 1) ifTrue: [
 			^ PEGMatchResult new
 				cst: parseResult;

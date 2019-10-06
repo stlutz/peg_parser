@@ -23,22 +23,26 @@ testApply
 	cGenerator compile: #parse_C into: parserClass.
 
 	parser := parserClass new.
-	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := '123matchstring'.
 	
-	parseResult := parser perform: #parse_A:atPos: withArguments: {parseString . 1}.
+	"prepare parser for parsing"
+	parser instVarAt: 1 put: parseString. "string"
+	parser instVarAt: 5 put: (PEGParserFailure newAt: 0). "rightmostFailure"
+	
+	
+	parseResult := parser perform: #parse_A: with: 1.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_A:atPos: withArguments: {parseString . 4}.
+	parseResult := parser perform: #parse_A: with: 4.
 	self assert: parseResult startPos equals: 4.
 	self assert: parseResult endPos equals: 15.
 	
-	parseResult := parser perform: #parse_B:atPos: withArguments: {parseString . 1}.
+	parseResult := parser perform: #parse_B: with: 1.
 	self assert: parseResult startPos equals: 1.
 	self assert: parseResult endPos equals: 2.
-	parseResult := parser perform: #parse_B:atPos: withArguments: {parseString . 4}.
+	parseResult := parser perform: #parse_B: with: 4.
 	self assert: parseResult equals: nil.
 	
-	parseResult := parser perform: #parse_C:atPos: withArguments: {parseString . 1}.
+	parseResult := parser perform: #parse_C: with: 1.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_C:atPos: withArguments: {parseString . 4}.
+	parseResult := parser perform: #parse_C: with: 4.
 	self assert: parseResult equals: nil.

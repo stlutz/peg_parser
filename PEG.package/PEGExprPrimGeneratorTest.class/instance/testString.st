@@ -5,15 +5,19 @@ testString
 	
 	stringGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
-	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := '123matchstring'.
 	
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 1}.
+	"prepare parser for parsing"
+	parser instVarAt: 1 put: parseString. "string"
+	parser instVarAt: 5 put: (PEGParserFailure newAt: 0). "rightmostFailure"
+	
+	
+	parseResult := parser perform: #parse_rule: with: 1.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 2}.
+	parseResult := parser perform: #parse_rule: with: 2.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 4}.
+	parseResult := parser perform: #parse_rule: with: 4.
 	self assert: parseResult startPos equals: 4.
 	self assert: parseResult endPos equals: 15.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 5}.
+	parseResult := parser perform: #parse_rule: with: 5.
 	self assert: parseResult equals: nil

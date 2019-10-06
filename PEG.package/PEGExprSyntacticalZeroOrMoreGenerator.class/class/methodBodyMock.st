@@ -4,8 +4,8 @@ methodBodyMock
 	currentPos := pos.
 	children := OrderedCollection new.
 	[
-		skipPos := self skipSpaces: string atPos: currentPos.
-		currentResult := self {1}: string atPos: skipPos.
+		skipPos := self skipSpaces: currentPos.
+		currentResult := self {1}: skipPos.
 		currentResult ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: currentResult]

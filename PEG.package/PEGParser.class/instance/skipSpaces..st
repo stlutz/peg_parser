@@ -1,7 +1,7 @@
 as yet unclassified
-skipSpaces: string atPos: pos
+skipSpaces: pos
 	| spacesResult |
-	spacesResult := self apply_spaces: string atPos: pos.
+	spacesResult := self apply_spaces: pos.
 	^ spacesResult 
 		ifNil: [pos]
 		ifNotNil: [spacesResult endPos]

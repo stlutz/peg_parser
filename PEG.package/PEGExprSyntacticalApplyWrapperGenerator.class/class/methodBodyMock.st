@@ -1,5 +1,5 @@
 as yet unclassified
 methodBodyMock
 	^ '| skipPos |
-	skipPos := self skipSpaces: string atPos: pos.
-	^ self {1}: string atPos: skipPos'
+	skipPos := self skipSpaces: pos.
+	^ self {1}: skipPos'

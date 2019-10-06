@@ -2,7 +2,7 @@ as yet unclassified
 methodBodyMockWith: childCount
 	| preCode choiceCode postCode code |
 	preCode := '| childResult |'.
-	choiceCode := 'childResult := self {1}: string atPos: pos.
+	choiceCode := 'childResult := self {1}: pos.
 	childResult
 		ifNotNil: [
 			^ PEGShadowAbstractSyntaxTreeNode new

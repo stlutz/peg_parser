@@ -1,3 +1,3 @@
 as yet unclassified
 methodBodyMock
-	^ '^ self {1}: string atPos: pos'
+	^ '^ self {1}: pos'

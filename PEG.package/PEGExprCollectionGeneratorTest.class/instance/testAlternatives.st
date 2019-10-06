@@ -8,23 +8,26 @@ testAlternatives
 	
 	alternativesGenerator compile: #parse_rule into: parserClass.
 	parser := parserClass new.
-	parser rightmostFailure: (PEGParserFailure newAt: 0).
 	parseString := '123456matchstring123test'.
 	
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 1}.
+	"prepare parser for parsing"
+	parser instVarAt: 1 put: parseString. "string"
+	parser instVarAt: 5 put: (PEGParserFailure newAt: 0). "rightmostFailure"
+	
+	parseResult := parser perform: #parse_rule: with: 1.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 2}.
+	parseResult := parser perform: #parse_rule: with: 2.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 4}.
+	parseResult := parser perform: #parse_rule: with: 4.
 	self assert: parseResult startPos equals: 4.
 	self assert: parseResult endPos equals: 5.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 5}.
+	parseResult := parser perform: #parse_rule: with: 5.
 	self assert: parseResult startPos equals: 5.
 	self assert: parseResult endPos equals: 6.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 7}.
+	parseResult := parser perform: #parse_rule: with: 7.
 	self assert: parseResult startPos equals: 7.
 	self assert: parseResult endPos equals: 18.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 18}.
+	parseResult := parser perform: #parse_rule: with: 18.
 	self assert: parseResult equals: nil.
-	parseResult := parser perform: #parse_rule:atPos: withArguments: {parseString . 21}.
+	parseResult := parser perform: #parse_rule: with: 21.
 	self assert: parseResult equals: nil.

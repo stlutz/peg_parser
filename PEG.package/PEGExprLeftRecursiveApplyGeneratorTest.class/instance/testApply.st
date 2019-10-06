@@ -55,4 +55,4 @@ testApply
 
 	parseString := 'c_cb'.	
 	parseResult := parser parse: parseString startingFrom: #a.
-	self assert: parseResult failed equals: true.
+	self assert: parseResult failed.
