@@ -10,8 +10,14 @@ grow: leftRecursion atPos: pos
 		(currentResult == nil or: [currentResult endPos <= result endPos])
 			ifTrue: [growing := false]
 			ifFalse: [
-				result := currentResult.
-				(memoization at: pos) at: leftRecursion ruleName put: currentResult]
+				"currentResult cannot be nil here"
+				result := PEGAbstractSyntaxTreeNode new
+					rule: #apply;
+					startPos: pos;
+					endPos: currentResult endPos;
+					children: currentResult nodeList;
+					yourself.
+				(memoization at: pos) at: leftRecursion ruleName put: result]
 	] doWhileTrue: [growing].
 
 	heads at: pos put: nil.

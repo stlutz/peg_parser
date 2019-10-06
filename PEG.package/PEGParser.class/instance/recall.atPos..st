@@ -11,10 +11,19 @@ recall: ruleName atPos: pos
 	
 	(head evalSet includes: ruleName)
 		ifTrue: [
-			| result |
+			| childResult |
 			head evalSet remove: ruleName.
-			result := self perform: (ruleName , ':') asSymbol with: pos.
-			(memoization at: pos) at: ruleName put: result.
-			^ result].
+			childResult := self perform: (ruleName , ':') asSymbol with: pos.
+			
+			^ (memoization at: pos) at: ruleName put: (
+				childResult
+					ifNil: [nil]
+					ifNotNil: [
+						PEGAbstractSyntaxTreeNode new
+							rule: #apply;
+							startPos: pos;
+							endPos: childResult endPos;
+							children: childResult nodeList;
+							yourself ] ) ].
 	
 	^ memoizationResult

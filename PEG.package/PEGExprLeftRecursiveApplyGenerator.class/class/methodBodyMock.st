@@ -1,13 +1,22 @@
 as yet unclassified
 methodBodyMock
-	^ '| recallResult leftRecursion result |
+	^ '| recallResult leftRecursion childResult result |
 	recallResult := self recall: #{1} atPos: pos.
 	recallResult
 		ifNil: [
 			leftRecursion := PEGLeftRecursion newWithSeed: nil withRule: #{1}.
 			leftRecursionStack addFirst: leftRecursion.
 			(memoization at: pos) at: #{1} put: leftRecursion.
-			result := self {1}: pos.
+			childResult := self {1}: pos.
+			result := childResult
+				ifNil: [nil]
+				ifNotNil: [
+					PEGAbstractSyntaxTreeNode new
+					rule: #apply;
+					startPos: pos;
+					endPos: childResult endPos;
+					children: childResult nodeList;
+					yourself].
 			leftRecursionStack removeFirst.
 			
 			leftRecursion head
@@ -22,4 +31,5 @@ methodBodyMock
 				ifTrue: [
 					self setup: #{1} withDetectedLeftRecursion: recallResult.
 					^ recallResult seed]
-				ifFalse: [^ recallResult] ]'
+				ifFalse: [
+					^ recallResult]]'
