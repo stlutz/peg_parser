@@ -1,0 +1,17 @@
+{
+	"category" : "PEG-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ruleName",
+		"startPos",
+		"endPos",
+		"children" ],
+	"name" : "PEGNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

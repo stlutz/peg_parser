@@ -5,9 +5,4 @@ methodBodyMock
 	^ childResult
 		ifNil: [nil]
 		ifNotNil: [
-			PEGAbstractSyntaxTreeNode new
-				rule: self;
-				startPos: pos;
-				endPos: pos;
-				children: childResult nodeList;
-				yourself]'
+			PEGNode newOn: #lookahead from: pos to: pos children: childResult nodeList]'

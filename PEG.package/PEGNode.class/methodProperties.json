@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"newOn:from:to:" : "fs 10/6/2019 19:44",
+		"newOn:from:to:children:" : "fs 10/6/2019 19:43" },
+	"instance" : {
+		"children" : "fs 10/6/2019 19:37",
+		"children:" : "fs 10/6/2019 19:37",
+		"endPos" : "fs 10/6/2019 19:37",
+		"endPos:" : "fs 10/6/2019 19:37",
+		"nodeList" : "fs 10/6/2019 19:39",
+		"printString" : "fs 10/6/2019 19:39",
+		"ruleName" : "fs 10/6/2019 19:37",
+		"ruleName:" : "fs 10/6/2019 19:37",
+		"startPos" : "fs 10/6/2019 19:37",
+		"startPos:" : "fs 10/6/2019 19:37" } }

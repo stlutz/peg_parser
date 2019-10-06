@@ -4,16 +4,6 @@ methodBodyMock
 	childResult := self {1}: pos.
 	^ childResult
 		ifNil: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #optional;
-				startPos: pos;
-				endPos: pos;
-				children: OrderedCollection new;
-				yourself]
+			PEGNode newOn: #optional from: pos to: pos children: OrderedCollection new]
 		ifNotNil: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #optional;
-				startPos: pos;
-				endPos: childResult endPos;
-				children: childResult nodeList;
-				yourself]'
+			PEGNode newOn: #optional from: pos to: childResult endPos children: childResult nodeList]'

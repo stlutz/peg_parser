@@ -11,12 +11,7 @@ methodBodyMock
 			result := childResult
 				ifNil: [nil]
 				ifNotNil: [
-					PEGAbstractSyntaxTreeNode new
-					rule: #apply;
-					startPos: pos;
-					endPos: childResult endPos;
-					children: childResult nodeList;
-					yourself].
+					PEGNode newOn: #apply from: pos to: childResult endPos children: childResult nodeList].
 			leftRecursionStack removeFirst.
 			
 			leftRecursion head

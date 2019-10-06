@@ -11,12 +11,7 @@ grow: leftRecursion atPos: pos
 			ifTrue: [growing := false]
 			ifFalse: [
 				"currentResult cannot be nil here"
-				result := PEGAbstractSyntaxTreeNode new
-					rule: #apply;
-					startPos: pos;
-					endPos: currentResult endPos;
-					children: currentResult nodeList;
-					yourself.
+				result := PEGNode newOn: #apply from: pos to: currentResult endPos children: currentResult nodeList.
 				(memoization at: pos) at: leftRecursion ruleName put: result]
 	] doWhileTrue: [growing].
 

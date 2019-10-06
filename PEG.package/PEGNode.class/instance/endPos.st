@@ -1,0 +1,4 @@
+accessing
+endPos
+
+	^ endPos

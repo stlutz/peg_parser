@@ -13,10 +13,5 @@ methodBodyMock
 
 	^ children size > 0
 		ifTrue: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #oneOrMore;
-				startPos: pos;
-				endPos: currentPos;
-				children: (children collect: #nodeList) flatten;
-				yourself]
+			PEGNode newOn: #_list from: pos to: currentPos children: (children collect: #nodeList) flatten]
 		ifFalse: [nil]'

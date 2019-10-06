@@ -10,9 +10,4 @@ methodBodyMock
 			children add: currentResult]
 	] doWhileTrue: [(currentResult == nil) not].
 
-	^ PEGAbstractSyntaxTreeNode new
-		rule: #zeroOrMore;
-		startPos: pos;
-		endPos: currentPos;
-		children: (children collect: #nodeList) flatten;
-		yourself'
+	^ PEGNode newOn: #_list from: pos to: currentPos children: (children collect: #nodeList) flatten'

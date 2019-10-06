@@ -4,11 +4,7 @@ methodBodyMock
 	char := string at: pos ifAbsent: [^ nil].
 	^ (#startChar <= char and: [char <= #endChar])
 		ifTrue: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #range;
-				startPos: pos;
-				endPos: pos + 1;
-				yourself]
+			PEGNode newOn: #_terminal from: pos to: pos + 1]
 		ifFalse: [
 			self reportFailureOf: {#startChar . #endChar} atPos: pos.
 			nil]'

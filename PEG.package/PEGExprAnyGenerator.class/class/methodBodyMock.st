@@ -2,11 +2,7 @@ as yet unclassified
 methodBodyMock
 	^ '^ (pos <= string size)
 		ifTrue: [
-			PEGAbstractSyntaxTreeNode new
-				rule: #any;
-				startPos: pos;
-				endPos: pos + 1;
-				yourself]
+			PEGNode newOn: #any from: pos to: pos + 1]
 		ifFalse: [
 			self reportFailureOf: #any atPos: pos.
 			nil]'

@@ -4,12 +4,7 @@ methodBodyMock
 	childResult := self {1}: pos.
 	^ childResult
 		ifNil: [
-			PEGShadowAbstractSyntaxTreeNode new
-				rule: self;
-				startPos: pos;
-				endPos: pos;
-				children: OrderedCollection new;
-				yourself]
+			PEGShadowNode newOn: #shadow from: pos to: pos children: OrderedCollection new]
 		ifNotNil: [
 			self reportFailureOf: #not atPos: pos.
 			nil]'
