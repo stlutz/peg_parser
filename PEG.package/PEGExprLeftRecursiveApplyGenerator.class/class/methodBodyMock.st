@@ -1,7 +1,7 @@
 as yet unclassified
 methodBodyMock
 	^ '| recallResult leftRecursion childResult result |
-	recallResult := self recall: #{1} atPos: pos.
+	recallResult := self recall: #{1} withName: #{2} atPos: pos.
 	recallResult
 		ifNil: [
 			leftRecursion := PEGLeftRecursion newWithSeed: nil withRule: #{1}.
@@ -11,7 +11,7 @@ methodBodyMock
 			result := childResult
 				ifNil: [nil]
 				ifNotNil: [
-					PEGNode newOn: #apply from: pos to: childResult endPos children: childResult nodeList].
+					PEGNode newOn: #{2} from: pos to: childResult endPos children: childResult nodeList].
 			leftRecursionStack removeFirst.
 			
 			leftRecursion head

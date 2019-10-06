@@ -1,7 +1,7 @@
 as yet unclassified
-newWithRule: ruleName
+newWithRule: ruleMethod
 	^ self new
-		ruleName: ruleName;
+		ruleMethod: ruleMethod;
 		involvedSet: IdentitySet new;
 		evalSet: IdentitySet new;
 		yourself

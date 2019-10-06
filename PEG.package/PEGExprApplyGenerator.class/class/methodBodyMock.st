@@ -6,4 +6,4 @@ methodBodyMock
 		childResult
 			ifNil: [nil]
 			ifNotNil: [
-				PEGNode newOn: #apply from: pos to: childResult endPos children: childResult nodeList ] ]'
+				PEGNode newOn: #{2} from: pos to: childResult endPos children: childResult nodeList ] ]'

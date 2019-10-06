@@ -1,6 +1,6 @@
 as yet unclassified
-newWithSeed: ast withRule: ruleName
+newWithSeed: ast withRule: ruleMethod
 	^ self new
 		seed: ast;
-		ruleName: ruleName;
+		ruleMethod: ruleMethod;
 		yourself
