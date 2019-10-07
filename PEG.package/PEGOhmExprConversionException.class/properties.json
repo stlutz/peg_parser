@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGOhmExprConversionException",
+	"pools" : [
+		 ],
+	"super" : "Exception",
+	"type" : "normal" }

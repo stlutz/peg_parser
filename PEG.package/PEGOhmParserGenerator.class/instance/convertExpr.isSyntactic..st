@@ -3,8 +3,10 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 	| g actions |
 	g := generator.
 	
-	"actions dict mimics a switch case"
+	"This actions dictionary mimics a switch case."
+	"It ensures we do not verget any cases."
 	actions := Dictionary new.
+	
 	actions at: OhmPExprAlt put: [
 		| childGenerators |
 		childGenerators := anOhmExpr terms collect: [:childExpr |
@@ -55,8 +57,16 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 			ifTrue: [g synseq: childGenerators]
 			ifFalse: [g lexseq: childGenerators]].
 	
-	"change these in the future"
-	actions at: OhmPExprParam put: [^ g any].
-	actions at: OhmPExprCaseInsensitive put: [^ g any].
+	actions at: OhmPExprParam put: [
+		self flag: #todo. "Implement the param translation once it it is included in Ohm."
+		PEGOhmExprConversionException signal: 'param'
+		].
+	
+	actions at: OhmPExprCaseInsensitive put: [
+		self flag: #todo.
+		"Implement the param translation."
+		"This requires a new primitive expression generator similar to the string expression generator."
+		"Furthermore this new generator needs to considered in the left-recursion detection."
+		PEGOhmExprConversionException signal: 'case insensitive'].
 
 	(actions at: anOhmExpr class) value
