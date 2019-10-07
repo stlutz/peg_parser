@@ -1,0 +1,14 @@
+{
+	"category" : "PEGPlayground-Exprs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"childExpr" ],
+	"name" : "PEGExprWrapper",
+	"pools" : [
+		 ],
+	"super" : "PEGExpr",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "PEGPlayground",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rules",
+		"applyExprs" ],
+	"name" : "PEGBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

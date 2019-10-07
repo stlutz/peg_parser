@@ -1,0 +1,14 @@
+{
+	"category" : "PEGPlayground",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGShadowAbstractSyntaxTreeNode",
+	"pools" : [
+		 ],
+	"super" : "PEGAbstractSyntaxTreeNode",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "PEGPlayground",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pos",
+		"rule" ],
+	"name" : "PEGParsingError",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

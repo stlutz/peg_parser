@@ -1,0 +1,17 @@
+{
+	"category" : "PEGBenchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"input",
+		"result",
+		"success",
+		"time" ],
+	"name" : "PEGBenchmarkerParsingResult",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

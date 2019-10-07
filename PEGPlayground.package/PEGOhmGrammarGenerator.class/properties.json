@@ -1,0 +1,15 @@
+{
+	"category" : "PEGPlayground",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"grammar",
+		"builder" ],
+	"name" : "PEGOhmGrammarGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

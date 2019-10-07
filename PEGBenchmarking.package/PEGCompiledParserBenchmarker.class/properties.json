@@ -1,0 +1,14 @@
+{
+	"category" : "PEGBenchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGCompiledParserBenchmarker",
+	"pools" : [
+		 ],
+	"super" : "PEGBenchmarker",
+	"type" : "normal" }

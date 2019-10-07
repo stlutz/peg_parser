@@ -1,5 +1,5 @@
 {
-	"category" : "PEG-ParserGenerator",
+	"category" : "PEG",
 	"classinstvars" : [
 		"ruleDefinitions",
 		"leftRecursiveIdentifiers",

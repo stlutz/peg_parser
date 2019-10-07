@@ -1,0 +1,14 @@
+{
+	"category" : "PEGBenchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGOhmBenchmarker",
+	"pools" : [
+		 ],
+	"super" : "PEGBenchmarker",
+	"type" : "normal" }
