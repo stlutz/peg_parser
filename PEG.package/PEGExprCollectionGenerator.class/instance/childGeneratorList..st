@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 childGeneratorList: aGeneratorList
 
 	childGeneratorList := aGeneratorList

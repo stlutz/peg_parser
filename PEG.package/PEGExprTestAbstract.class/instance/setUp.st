@@ -1,4 +1,4 @@
-as yet unclassified
+running
 setUp
 	| randomString |
 	randomString := (Random new) next asString.

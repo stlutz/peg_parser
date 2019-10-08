@@ -1,3 +1,3 @@
-as yet unclassified
+initialize-release
 initialize
 	parser := PEGBuildSmalltalkGrammar go.

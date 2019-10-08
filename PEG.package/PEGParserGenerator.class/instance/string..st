@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 string: aString
 	^ self str: aString

@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 lexapply: aRuleName
 	^ PEGExprLexicalApplyWrapperGenerator newWithRule: aRuleName

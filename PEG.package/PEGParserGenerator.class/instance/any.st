@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 any
 	^ PEGExprAnyGenerator new.

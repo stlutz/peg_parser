@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 nodeList
 
 	^ OrderedCollection with: self

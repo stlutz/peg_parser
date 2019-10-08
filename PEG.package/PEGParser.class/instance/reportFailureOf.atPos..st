@@ -1,4 +1,4 @@
-as yet unclassified
+private
 reportFailureOf: aRule atPos: pos
 	pos < rightmostFailure pos ifTrue: [^ nil].
 

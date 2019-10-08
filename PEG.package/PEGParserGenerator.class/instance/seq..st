@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 seq: anExprGeneratorList
 	^ self lexseq: anExprGeneratorList

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testTrickyGrammar
 	"
 	A = 'a' A 'b' | 'ab'

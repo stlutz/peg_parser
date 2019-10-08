@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 str: aString
 	^ PEGExprStringGenerator newString: aString

@@ -1,4 +1,4 @@
-as yet unclassified
+private
 grow: leftRecursion atPos: pos
 	| result currentResult growing |
 	heads at: pos put: leftRecursion head.

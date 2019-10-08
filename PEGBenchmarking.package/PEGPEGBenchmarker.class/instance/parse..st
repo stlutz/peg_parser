@@ -1,3 +1,3 @@
-as yet unclassified
+runner
 parse: string
 	^ parser parse: string startingFrom: #MethodDeclaration

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testOneOrMore
 	| rangeGenerator oneOrMoreGenerator parser parseString parseResult |
 	rangeGenerator := PEGExprRangeGenerator newFrom: $0 to: $9.

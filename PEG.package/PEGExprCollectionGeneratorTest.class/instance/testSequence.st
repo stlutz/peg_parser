@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testSequence
 	" rule = [A-z] ([A-z] | [0-9] | '_')* ':' 
 	[A-z] .. rule_1

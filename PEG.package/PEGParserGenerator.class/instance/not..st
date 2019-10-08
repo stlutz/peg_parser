@@ -1,4 +1,4 @@
-as yet unclassified
+expressions
 not: anExprGenerator
 	self checkExprGenerator: anExprGenerator.
 	^ PEGExprNotGenerator new: anExprGenerator.

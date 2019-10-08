@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 synapply: aRuleName
 	^ PEGExprSyntacticalApplyWrapperGenerator newWithRule: aRuleName

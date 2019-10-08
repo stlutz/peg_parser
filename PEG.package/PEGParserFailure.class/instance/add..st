@@ -1,3 +1,3 @@
-as yet unclassified
+invocation
 add: aRule
 	rules add: aRule

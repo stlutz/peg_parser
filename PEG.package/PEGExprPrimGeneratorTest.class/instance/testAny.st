@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testAny
 	| anyGenerator parser parseString parseResult |
 	anyGenerator := PEGExprAnyGenerator new.

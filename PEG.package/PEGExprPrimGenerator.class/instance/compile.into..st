@@ -1,4 +1,4 @@
-as yet unclassified
+evaluation
 compile: aName into: aClass
 	| methodString methodIdentifier method |
 	methodString := (self class methodHead: aName asString) , Character lf , self class methodBodyMock.

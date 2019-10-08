@@ -1,4 +1,4 @@
-as yet unclassified
+private
 skipSpaces: pos
 	| spacesResult |
 	spacesResult := self apply_spaces: pos.

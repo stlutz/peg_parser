@@ -1,4 +1,4 @@
-as yet unclassified
+evaluation
 result
 	(superclass includesBehavior: PEGParser) ifFalse: [
 		self error: 'Class must inherit from PEGParser.'].

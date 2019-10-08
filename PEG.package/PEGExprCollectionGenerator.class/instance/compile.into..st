@@ -1,4 +1,4 @@
-as yet unclassified
+evaluation
 compile: aName into: aClass
 	| childNames methodString |
 	childNames := self class childNames: aName count: childGeneratorList size.

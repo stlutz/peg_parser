@@ -1,4 +1,4 @@
-as yet unclassified
+private
 setup: ruleMethod withDetectedLeftRecursion: leftRecursion
 	| leftRecursionStackLink |
 	leftRecursion head ifNil: [leftRecursion head: (PEGLeftRecursionHead newWithRule: ruleMethod)].

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testSimpleApply
 	"
 	a = a 'b' | 'a'

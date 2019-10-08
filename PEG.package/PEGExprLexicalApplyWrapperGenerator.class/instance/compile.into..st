@@ -1,4 +1,4 @@
-as yet unclassified
+evaluation
 compile: aName into: aClass
 	| methodString |
 

@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 plus: anExprGenerator
 	^ self lexplus: anExprGenerator

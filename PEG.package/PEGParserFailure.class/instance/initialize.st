@@ -1,3 +1,3 @@
-as yet unclassified
+initialize-release
 initialize
 	rules := OrderedCollection new

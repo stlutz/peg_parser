@@ -1,4 +1,4 @@
-as yet unclassified
+private
 answer: ruleMethod withGrowableLeftRecursion: leftRecursion atPos: pos
 	| head |
 	head := leftRecursion head.

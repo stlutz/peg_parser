@@ -1,4 +1,4 @@
-as yet unclassified
+parsing
 parse: parseString startingFrom: ruleName
 	| methodSignature parseResult |
 	string := parseString.

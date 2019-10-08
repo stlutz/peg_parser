@@ -1,4 +1,4 @@
-as yet unclassified
+private
 recall: ruleMethod withName: ruleName atPos: pos
 	| memoizationResult head |
 	memoizationResult := (memoization at: pos ifAbsent: [^nil]) at: ruleMethod ifAbsent: [nil].

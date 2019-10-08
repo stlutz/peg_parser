@@ -1,3 +1,3 @@
-as yet unclassified
+expressions
 apply: aRuleName
 	^ self lexapply: aRuleName
