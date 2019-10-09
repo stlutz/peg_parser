@@ -1,0 +1,14 @@
+{
+	"category" : "PEGBenchmarking",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"generator" ],
+	"name" : "PEGStringGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
