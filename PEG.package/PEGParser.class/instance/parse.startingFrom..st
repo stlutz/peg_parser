@@ -12,9 +12,7 @@ parse: parseString startingFrom: ruleName
 
 
 	parseResult == nil ifFalse: [
-		| endPos |
-		endPos := self skipSpaces: parseResult endPos.
-		endPos == (string size + 1) ifTrue: [
+		(parseResult endPos == (string size + 1) or: [(self skipSpaces: parseResult endPos) == (string size + 1)]) ifTrue: [
 			^ PEGMatchResult new
 				cst: parseResult;
 				yourself]].
