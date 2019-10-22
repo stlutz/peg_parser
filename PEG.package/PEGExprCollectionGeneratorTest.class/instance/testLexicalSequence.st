@@ -1,5 +1,5 @@
 testing
-testSequence
+testLexicalSequence
 	" rule = [A-z] ([A-z] | [0-9] | '_')* ':' 
 	[A-z] .. rule_1
 	([A-z] | [0-9] | '_')*  .. rule_2	

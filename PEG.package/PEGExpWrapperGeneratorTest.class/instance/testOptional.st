@@ -1,4 +1,4 @@
-testing
+as yet unclassified
 testOptional
 	| stringGenerator optionalGenerator parser parseString parseResult |
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.

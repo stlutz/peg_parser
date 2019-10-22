@@ -3,4 +3,5 @@
 		 },
 	"instance" : {
 		"testAlternatives" : "fs 10/6/2019 14:02",
-		"testSequence" : "fs 10/6/2019 14:04" } }
+		"testLexicalSequence" : "fs 10/22/2019 13:01",
+		"testSynacticalSequence" : "fs 10/22/2019 13:28" } }

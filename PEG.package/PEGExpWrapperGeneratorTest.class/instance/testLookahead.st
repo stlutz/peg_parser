@@ -1,4 +1,4 @@
-testing
+as yet unclassified
 testLookahead
 	| stringGenerator lookaheadGenerator parser parseString parseResult |
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.
