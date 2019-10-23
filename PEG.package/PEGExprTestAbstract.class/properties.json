@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"categoryName",
-		"parserName",
-		"parserClass" ],
+		 ],
 	"name" : "PEGExprTestAbstract",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "PEGTestAbstract",
 	"type" : "normal" }

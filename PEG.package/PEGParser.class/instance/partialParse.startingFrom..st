@@ -1,5 +1,5 @@
 parsing
-parse: parseString startingFrom: ruleName
+partialParse: parseString startingFrom: ruleName
 	| methodSignature parseResult |
 	string := parseString.
 	memoization := (1 to: parseString size + 1) collect: [:index | IdentityDictionary new].
@@ -12,10 +12,9 @@ parse: parseString startingFrom: ruleName
 
 
 	parseResult == nil ifFalse: [
-		(parseResult endPos == (string size + 1) or: [(self skipSpaces: parseResult endPos) == (string size + 1)]) ifTrue: [
-			^ PEGMatchResult new
-				cst: parseResult;
-				yourself]].
+		^ PEGMatchResult new
+			cst: parseResult;
+			yourself].
 		
 	^ PEGFailedMatchResult new
 		cst: parseResult;

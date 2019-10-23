@@ -1,18 +1,12 @@
-testing
+as yet unclassified
 testTrickyGrammar
 	"
 	A = 'a' A 'b' | 'ab'
 	B = 'b' B 'c' | 'bc'
 	C = !. | &(A !'b') 'a'* B !.
 	"
-	| g parserClass parser parseResult|
+	| g parser parseResult|
 	g := PEGParserGenerator new.
-
-	parserClass := PEGParser subclass: #TrickyGrammar
-		instanceVariableNames: ''
-		classVariableNames: ''
-		poolDictionaries: ''
-		category: categoryName.
 	
 	"Spaces"
 	(g star: (g string: ' ')) compile: #parse_spaces into: parserClass.

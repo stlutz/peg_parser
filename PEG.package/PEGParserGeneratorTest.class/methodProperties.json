@@ -2,6 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "fs 8/9/2019 15:13",
-		"tearDown" : "fs 8/9/2019 15:13",
-		"testTrickyGrammar" : "fs 9/24/2019 15:11" } }
+		"testTrickyGrammar" : "fs 10/23/2019 09:11" } }

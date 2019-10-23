@@ -1,5 +1,5 @@
 as yet unclassified
-newWith: ruleDefinitions with: grammarName with: superclass
+newWithRuleDefinitions: ruleDefinitions name: grammarName superclass: superclass
 	^ self new
 		ruleDefinitions: ruleDefinitions;
 		grammarName: grammarName;

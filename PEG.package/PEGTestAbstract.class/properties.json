@@ -6,9 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "PEGParserGeneratorTest",
+		"categoryName",
+		"randomString",
+		"parserName",
+		"parserClass" ],
+	"name" : "PEGTestAbstract",
 	"pools" : [
 		 ],
-	"super" : "PEGTestAbstract",
+	"super" : "TestCase",
 	"type" : "normal" }

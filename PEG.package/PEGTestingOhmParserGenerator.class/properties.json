@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "PEGParserGeneratorTest",
+		"category",
+		"suffix" ],
+	"name" : "PEGTestingOhmParserGenerator",
 	"pools" : [
 		 ],
-	"super" : "PEGTestAbstract",
+	"super" : "PEGOhmParserGenerator",
 	"type" : "normal" }

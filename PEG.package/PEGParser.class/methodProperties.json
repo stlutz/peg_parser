@@ -9,7 +9,8 @@
 	"instance" : {
 		"answer:withGrowableLeftRecursion:atPos:" : "fs 10/7/2019 00:03",
 		"grow:atPos:" : "fs 10/7/2019 00:04",
-		"parse:startingFrom:" : "fs 10/22/2019 14:18",
+		"parse:startingFrom:" : "fs 10/23/2019 13:21",
+		"partialParse:startingFrom:" : "fs 10/23/2019 15:00",
 		"recall:withName:atPos:" : "fs 10/7/2019 00:10",
 		"reportFailureOf:atPos:" : "fs 9/16/2019 10:58",
 		"rightmostFailure" : "fs 8/19/2019 16:50",

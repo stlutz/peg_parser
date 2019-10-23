@@ -3,11 +3,13 @@ result
 	(superclass includesBehavior: PEGParser) ifFalse: [
 		self error: 'Class must inherit from PEGParser.'].
 	
+	category ifNil: [category := 'GeneratedPEGParsers'].
+	
 	parserClass := superclass subclass: self classIdentifier
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		category: 'GeneratedPEGParsers'.
+		category: category.
 	
 	parserClass ruleDefinitions: ruleDefinitions.
 	

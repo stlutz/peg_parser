@@ -1,4 +1,4 @@
 generate
 generate: aGrammarName inheritFrom: superclass
 	
-	^ (PEGBuildParser newWith: ruleDefinitions with: aGrammarName with: superclass) result
+	^ (PEGBuildParser newWithRuleDefinitions: ruleDefinitions name: aGrammarName superclass: superclass) result
