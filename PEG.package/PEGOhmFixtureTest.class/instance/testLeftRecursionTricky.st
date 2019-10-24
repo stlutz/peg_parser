@@ -9,6 +9,6 @@ testLeftRecursionTricky
 				            fooRec = bar digit
 				            bar = barRec | digit
 				            barRec = foo digit }", 
-		"matchContents" : [ { "input" : "1234", "expect" : true } ] }'.
+		"matchContents" : [ { "input" : "1234", "expect" : true, "streamAtEnd" : false } ] }'.
 	
 	self assertFixture: fixture
