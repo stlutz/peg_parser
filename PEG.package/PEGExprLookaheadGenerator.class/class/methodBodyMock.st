@@ -5,4 +5,4 @@ methodBodyMock
 	^ childResult
 		ifNil: [nil]
 		ifNotNil: [
-			PEGShadowNode newOn: #lookahead from: pos to: pos children: childResult nodeList]'
+			PEGShadowNode newOn: #lookahead for: string from: pos to: pos children: childResult nodeList]'

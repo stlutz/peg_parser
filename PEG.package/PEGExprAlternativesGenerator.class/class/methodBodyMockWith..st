@@ -5,7 +5,7 @@ methodBodyMockWith: childCount
 	choiceCode := 'childResult := self {1}: pos.
 	childResult
 		ifNotNil: [
-			^ PEGShadowNode newOn: #shadow from: pos to: childResult endPos children: childResult nodeList].'.
+			^ PEGShadowNode newOn: #shadow for: string from: pos to: childResult endPos children: childResult nodeList].'.
 	postCode := '^ nil'.
 
 	code := preCode , Character lf , Character lf.

@@ -10,7 +10,7 @@ methodBodyMockWith: childCount
 		ifNotNil: [
 			currentPos := currentResult endPos.
 			children add: currentResult].'.
-	footerCode := '^ PEGShadowNode newOn: #shadow from: pos to: currentPos children: (children collect: #nodeList) flatten'.
+	footerCode := '^ PEGShadowNode newOn: #shadow for: string from: pos to: currentPos children: (children collect: #nodeList) flatten'.
 
 	code := headerCode , Character lf , Character lf.
 	1 to: childCount do: [:index | code := code , (elementCode format: {'{' , index , '}'}) , Character lf , Character lf].

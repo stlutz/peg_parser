@@ -11,7 +11,12 @@ grow: leftRecursion atPos: pos
 			ifTrue: [growing := false]
 			ifFalse: [
 				"currentResult cannot be nil here"
-				result := PEGNode newOn: leftRecursion seed ruleName from: pos to: currentResult endPos children: currentResult nodeList.
+				result := PEGNode 
+					newOn: leftRecursion seed ruleName 
+					for: string
+					from: pos 
+					to: currentResult endPos 
+					children: currentResult nodeList.
 				(memoization at: pos) at: leftRecursion ruleMethod put: result]
 	] doWhileTrue: [growing].
 

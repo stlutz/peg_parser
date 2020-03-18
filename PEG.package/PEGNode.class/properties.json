@@ -9,7 +9,8 @@
 		"ruleName",
 		"startPos",
 		"endPos",
-		"children" ],
+		"children",
+		"contents" ],
 	"name" : "PEGNode",
 	"pools" : [
 		 ],

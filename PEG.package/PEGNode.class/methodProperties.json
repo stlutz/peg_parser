@@ -1,12 +1,15 @@
 {
 	"class" : {
-		"newOn:from:to:" : "fs 10/6/2019 19:44",
-		"newOn:from:to:children:" : "fs 10/6/2019 19:43" },
+		"newOn:for:from:to:" : "pre 3/18/2020 16:16",
+		"newOn:for:from:to:children:" : "pre 3/18/2020 16:11" },
 	"instance" : {
 		"children" : "fs 10/6/2019 19:37",
 		"children:" : "fs 10/6/2019 19:37",
+		"contents" : "pre 3/18/2020 16:10",
+		"contents:" : "pre 3/18/2020 16:10",
 		"endPos" : "fs 10/6/2019 19:37",
 		"endPos:" : "fs 10/6/2019 19:37",
+		"interval" : "pre 3/18/2020 16:25",
 		"nodeList" : "fs 10/6/2019 19:39",
 		"printString" : "fs 10/6/2019 19:39",
 		"ruleName" : "fs 10/6/2019 19:37",

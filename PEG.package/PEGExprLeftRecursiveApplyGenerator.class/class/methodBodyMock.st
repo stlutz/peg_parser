@@ -11,7 +11,7 @@ methodBodyMock
 			result := childResult
 				ifNil: [nil]
 				ifNotNil: [
-					PEGNode newOn: #{2} from: pos to: childResult endPos children: childResult nodeList].
+					PEGNode newOn: #{2} for: string from: pos to: childResult endPos children: childResult nodeList].
 			leftRecursionStack removeFirst.
 			
 			leftRecursion head

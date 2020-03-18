@@ -4,7 +4,7 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 	g := generator.
 	
 	"This actions dictionary mimics a switch case."
-	"It ensures we do not verget any cases."
+	"It ensures we do not forget any cases."
 	actions := Dictionary new.
 	
 	actions at: OhmPExprAlt put: [

@@ -19,6 +19,11 @@ recall: ruleMethod withName: ruleName atPos: pos
 				childResult
 					ifNil: [nil]
 					ifNotNil: [
-						PEGNode newOn: ruleName from: pos to: childResult endPos children: childResult nodeList ] ) ].
+						PEGNode 
+							newOn: ruleName 
+							for: string
+							from: pos 
+							to: childResult endPos 
+							children: childResult nodeList ] ) ].
 	
 	^ memoizationResult
