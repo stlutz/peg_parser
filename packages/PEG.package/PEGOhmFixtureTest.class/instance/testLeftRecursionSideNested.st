@@ -1,0 +1,4 @@
+tests
+testLeftRecursionSideNested
+	
+	self assertFixture: OhmParsingExpressionFixtures leftRecursionSideNested

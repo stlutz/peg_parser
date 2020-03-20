@@ -12,5 +12,5 @@ methodBodyMock
 
 	^ children size > 0
 		ifTrue: [
-			PEGNode newOn: #_list for: string from: pos to: currentPos - 1 children: (children collect: #nodeList) flatten]
+			PEGNode newOn: #_list for: string from: pos to: currentPos children: (children collect: #nodeList) flatten]
 		ifFalse: [nil]'

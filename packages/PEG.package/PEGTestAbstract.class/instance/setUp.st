@@ -1,13 +1,7 @@
-as yet unclassified
+running
 setUp
-	randomString := (Random new) next asString.
-	randomString := randomString copyFrom: 3 to: (randomString size - 2).
 	
 	categoryName := 'PEG-ParserGenerators-Testclasses'.
-	parserName := 'PEGParser' , randomString.
-
-	parserClass := PEGParser subclass: parserName asSymbol
-		instanceVariableNames: ''
-		classVariableNames: ''
-		poolDictionaries: ''
-		category: categoryName
+	randomString := self newRandomString.
+	parserName := randomString. "to initialize for create parser class"
+	parserClass := self createNewParserClass

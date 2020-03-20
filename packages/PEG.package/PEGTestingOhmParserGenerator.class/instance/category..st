@@ -1,4 +1,4 @@
-as yet unclassified
+utility
 category: anObject
 
 	category := anObject

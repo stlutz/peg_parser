@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "fs 10/23/2019 10:31",
+		"createNewParserClass" : "pre 3/20/2020 11:05",
+		"newRandomString" : "pre 3/20/2020 11:57",
+		"setUp" : "pre 3/20/2020 11:58",
 		"tearDown" : "fs 10/23/2019 09:05" } }

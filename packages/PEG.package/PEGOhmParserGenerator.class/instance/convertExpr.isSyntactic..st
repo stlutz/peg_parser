@@ -46,6 +46,9 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 
 	actions at: OhmPExprRange put: [
 		^ g range: anOhmExpr startCharacter to: anOhmExpr endCharacter].
+	
+	actions at: OhmPExprRegex put: [
+		^ g regex: anOhmExpr regexString].
 
 	actions at: OhmPExprString put: [
 		^ g str: anOhmExpr matchString].
@@ -59,8 +62,7 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 	
 	actions at: OhmPExprParam put: [
 		self flag: #todo. "Implement the param translation once it it is included in Ohm."
-		PEGOhmExprConversionException signal: 'param'
-		].
+		PEGOhmExprConversionException signal: 'param'].
 	
 	actions at: OhmPExprCaseInsensitive put: [
 		self flag: #todo.

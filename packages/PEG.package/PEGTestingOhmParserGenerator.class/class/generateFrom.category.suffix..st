@@ -1,4 +1,4 @@
-as yet unclassified
+generating
 generateFrom: anOhmGrammar category: category suffix: suffix
 	| converter |
 	converter := self new

@@ -1,10 +1,12 @@
-as yet unclassified
+assertions
 assertMatchInterval: cases withParser: parser startingFrom: startRule
 	cases do: [:case |
-		| input expectInterval result |
+		| input expectedIntervals result |
 		input := case at: 'input'.
-		expectInterval := case at: 'expectInterval'.
+		expectedIntervals := case at: 'expectInterval'.
 		
-		result := parser partialParse: input startingFrom: startRule.
-		self assert: result cst startPos equals: (expectInterval at: 1).
-		self assert: result cst endPos equals: (expectInterval at: 2) ]
+		expectedIntervals ifNotNil: [
+			expectedIntervals do: [:expectedInterval | 	
+				result := parser partialParse: input startingFrom: startRule.
+				self assert: result cst startPos equals: expectedInterval first.
+				self assert: result cst endPos equals: expectedInterval second]]]

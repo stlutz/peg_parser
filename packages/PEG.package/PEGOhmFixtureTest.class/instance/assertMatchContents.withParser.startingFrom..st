@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assertMatchContents: cases withParser: parser startingFrom: startRule
 	cases do: [:case |
 		| input expect streamAtEnd result |
@@ -9,4 +9,4 @@ assertMatchContents: cases withParser: parser startingFrom: startRule
 		streamAtEnd
 			ifTrue: [result := parser parse: input startingFrom: startRule]
 			ifFalse: [result := parser partialParse: input startingFrom: startRule].
-		self assert: result succeeded equals: expect ]
+		self assert: expect equals: result succeeded]

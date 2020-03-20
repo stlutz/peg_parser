@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assertMatchTreeNode: node toDict: dict
 	self assert: node ruleName equals: (dict at: 'ruleName').
 	node children ifNotNil: [

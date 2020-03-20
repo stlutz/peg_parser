@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-Exprs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"regexString" ],
+	"name" : "PEGExprRegexGenerator",
+	"pools" : [
+		 ],
+	"super" : "PEGExprPrimGenerator",
+	"type" : "normal" }

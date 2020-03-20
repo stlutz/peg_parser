@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assertMatchTree: cases withParser: parser startingFrom: startRule
 	cases do: [:case |
 		| input expectedTree result |

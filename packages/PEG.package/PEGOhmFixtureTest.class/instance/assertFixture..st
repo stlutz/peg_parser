@@ -1,18 +1,21 @@
-as yet unclassified
+assertions
 assertFixture: fixture
+	
 	| json ohmGrammar startRule parser |
 	json := Json readFrom: (ReadStream on: fixture).
 	ohmGrammar := OhmGrammar new: (json at: 'grammar').
 	startRule := ohmGrammar defaultStartRuleName.
 	
+	"To ensure previous rules are cleaned up between runs.... --pre"
+	self createNewParserClass.
 	parserClass := PEGTestingOhmParserGenerator generateFrom: ohmGrammar category: categoryName suffix: randomString.
 	parser := parserClass new.
 	
-	(json includesKey: 'matchContents') ifTrue: [
-		self assertMatchContents: (json at: 'matchContents') withParser: parser startingFrom: startRule].
+	json at: 'matchContents' ifPresent: [:content |
+		self assertMatchContents: content withParser: parser startingFrom: startRule].
 
-	(json includesKey: 'matchInterval') ifTrue: [
-		self assertMatchInterval: (json at: 'matchInterval') withParser: parser startingFrom: startRule].
+	json at: 'matchInterval' ifPresent: [:content |
+		"self assertMatchInterval: content withParser: parser startingFrom: startRule"].
 
-	(json includesKey: 'matchTree') ifTrue: [
-		self assertMatchTree: (json at: 'matchTree') withParser: parser startingFrom: startRule].
+	json at: 'matchTree' ifPresent: [:content |
+		self assertMatchTree: content withParser: parser startingFrom: startRule].

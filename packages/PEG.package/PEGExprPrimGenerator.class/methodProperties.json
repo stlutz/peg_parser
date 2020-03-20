@@ -2,6 +2,7 @@
 	"class" : {
 		"methodBodyMock" : "fs 8/8/2019 14:01" },
 	"instance" : {
-		"compile:into:" : "fs 8/19/2019 13:00",
+		"compile:into:" : "pre 3/20/2020 16:30",
 		"initialize" : "fs 7/26/2019 19:23",
-		"literalDict" : "fs 7/26/2019 19:27" } }
+		"literalDict" : "fs 7/26/2019 19:27",
+		"methodBodyMock" : "pre 3/20/2020 16:28" } }
