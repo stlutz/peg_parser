@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"methodBodyMockWith:" : "fs 8/8/2019 15:14",
 		"new:" : "fs 8/8/2019 13:06" },
 	"instance" : {
 		"childGeneratorList" : "fs 9/25/2019 13:46",
 		"childGeneratorList:" : "fs 10/6/2019 13:35",
-		"compile:into:" : "fs 8/19/2019 13:00" } }
+		"compile:into:" : "pre 3/20/2020 17:06",
+		"methodBodyTemplateWith:" : "pre 3/20/2020 17:06" } }

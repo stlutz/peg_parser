@@ -1,7 +1,7 @@
 evaluation
 compile: aName into: aClass
 	| methodString methodIdentifier method |
-	methodString := (self class methodHead: aName asString) , Character lf , self methodBodyMock.
+	methodString := (self methodHead: aName asString) , Character lf , self methodBodyTemplate.
 	methodIdentifier := aClass compileSilently: methodString.
 	method := aClass methodDict at: methodIdentifier.
 	

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 new: childGeneratorList
 	^ self new
 		childGeneratorList: childGeneratorList;

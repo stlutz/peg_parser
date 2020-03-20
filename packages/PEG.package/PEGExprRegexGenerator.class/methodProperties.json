@@ -1,8 +1,7 @@
 {
 	"class" : {
-		"methodBodyMock" : "pre 3/20/2020 16:23",
 		"newFrom:" : "pre 3/20/2020 16:29" },
 	"instance" : {
-		"methodBodyMock" : "pre 3/20/2020 16:31",
+		"methodBodyTemplate" : "pre 3/20/2020 17:12",
 		"regexString" : "pre 3/20/2020 16:29",
 		"regexString:" : "pre 3/20/2020 16:29" } }

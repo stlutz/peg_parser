@@ -1,0 +1,3 @@
+method body generation
+methodBodyTemplate
+	self subclassResponsibility
