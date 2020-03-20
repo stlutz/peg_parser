@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'PEG',
+      #directory : 'packages',
+      #platforms : [ #squeak ]
+    }
+  ],
+  #testing : {
+    #categories : [ 'PEG-*' ],
+    #coverage : {
+      #categories : [ 'PEG-*' ]
+    }
+  }
+}
