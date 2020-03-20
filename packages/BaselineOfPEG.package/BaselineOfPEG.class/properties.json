@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfPEG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfPEG",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
