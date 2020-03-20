@@ -1,4 +1,5 @@
 OrderedDictionary {
 	'packages\/Graphs.package' : #SquotCypressCodeSerializer,
-	'packages\/PEG.package' : #SquotCypressCodeSerializer
+	'packages\/PEG.package' : #SquotCypressCodeSerializer,
+	'packages\/BaselineOfPEG.package' : #SquotCypressCodeSerializer
 }
