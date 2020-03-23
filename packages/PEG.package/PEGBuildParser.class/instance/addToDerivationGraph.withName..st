@@ -12,7 +12,7 @@ addToDerivationGraph: generator withName: ruleName
 
 		"Collection"
 		(generator isKindOf: PEGExprCollectionGenerator) ifTrue: [
-			generator childGeneratorList do: [:childGenerator |
+			generator childGenerators do: [:childGenerator |
 				self addToDerivationGraph: childGenerator.
 				derivationGraph addEdgeFrom: generator to: childGenerator]].
 

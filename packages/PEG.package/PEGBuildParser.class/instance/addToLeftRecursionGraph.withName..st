@@ -12,7 +12,7 @@ addToLeftRecursionGraph: generator withName: ruleName
 		
 		"Alternatives"
 		(generator isKindOf: PEGExprAlternativesGenerator) ifTrue: [
-			generator childGeneratorList do: [:childGenerator |
+			generator childGenerators do: [:childGenerator |
 				self addToLeftRecursionGraph: childGenerator.
 				leftRecursionGraph addEdgeFrom: generator to: childGenerator]].
 		
@@ -21,7 +21,7 @@ addToLeftRecursionGraph: generator withName: ruleName
 		[generator isKindOf: PEGExprSyntacticalSequenceGenerator]) ifTrue: [
 			| lastCanParseEpsilon stream |
 			lastCanParseEpsilon := true.
-			stream := generator childGeneratorList readStream.
+			stream := generator childGenerators readStream.
 			
 			[lastCanParseEpsilon and: [stream atEnd not]]
 				whileTrue: [

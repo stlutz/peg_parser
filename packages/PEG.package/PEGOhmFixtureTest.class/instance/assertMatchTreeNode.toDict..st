@@ -5,4 +5,6 @@ assertMatchTreeNode: node toDict: dict
 		self assert: node children size equals: (dict at: 'children') size.
 	
 		node children with: (dict at: 'children') do: [:childNode :childDict |
-			self assertMatchTreeNode: childNode toDict: childDict] ]
+			childDict
+				ifNil: [self assert: childNode isNil]
+				ifNotNil: [self assertMatchTreeNode: childNode toDict: childDict]]]

@@ -1,4 +1,4 @@
-as yet unclassified
+failures
 expectedFailures
 
-	^ #(testLeftRecursionSideNested testLeftRecursionTricky testOptional testPlus testString)
+	^ #(testLeftRecursionSideNested testLeftRecursionTricky testPlus)

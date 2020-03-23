@@ -5,5 +5,5 @@ compile: aName into: aClass
 	childGenerator compile: childName into: aClass.
 	
 	methodString := (self methodHead: aName asString) , Character lf , self methodBodyTemplate.
-	methodString := methodString format: {childName}.
+	methodString := methodString format: {childName . self arity}.
 	aClass compileSilently: methodString

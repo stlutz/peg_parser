@@ -1,0 +1,4 @@
+accessing
+childGenerators
+
+	^ childGenerators

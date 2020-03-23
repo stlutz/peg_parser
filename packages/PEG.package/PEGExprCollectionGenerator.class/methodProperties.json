@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"new:" : "fs 8/8/2019 13:06" },
+		"new:" : "pre 3/23/2020 11:14" },
 	"instance" : {
-		"childGeneratorList" : "fs 9/25/2019 13:46",
-		"childGeneratorList:" : "fs 10/6/2019 13:35",
-		"compile:into:" : "pre 3/20/2020 17:06",
+		"childGenerators" : "pre 3/23/2020 11:14",
+		"childGenerators:" : "pre 3/23/2020 11:14",
+		"compile:into:" : "pre 3/23/2020 11:14",
 		"methodBodyTemplateWith:" : "pre 3/20/2020 17:06" } }

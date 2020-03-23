@@ -2,7 +2,8 @@
 	"class" : {
 		"new:" : "fs 8/8/2019 13:11" },
 	"instance" : {
+		"arity" : "pre 3/23/2020 11:19",
 		"childGenerator" : "fs 9/25/2019 13:49",
 		"childGenerator:" : "fs 8/8/2019 13:10",
-		"compile:into:" : "pre 3/20/2020 17:13",
+		"compile:into:" : "pre 3/23/2020 11:28",
 		"methodBodyTemplate" : "pre 3/20/2020 17:12" } }

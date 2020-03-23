@@ -1,5 +1,5 @@
 instance creation
 new: childGeneratorList
 	^ self new
-		childGeneratorList: childGeneratorList;
+		childGenerators: childGeneratorList;
 		yourself

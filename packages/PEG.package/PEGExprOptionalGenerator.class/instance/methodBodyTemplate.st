@@ -4,6 +4,17 @@ methodBodyTemplate
 	childResult := self {1}: pos.
 	^ childResult
 		ifNil: [
-			PEGNode newOn: #_terminal for: string from: pos to: pos children: OrderedCollection new]
+			PEGShadowNode
+				newOn: #shadow
+				for: string
+				from: pos
+				to: pos
+				children: ((1 to: {2}) collect: [:n | 
+					PEGNode 
+						newOn: #_terminal 
+						for: string 
+						from: pos 
+						to: pos 
+						children: \{nil\} asOrderedCollection])]
 		ifNotNil: [
-			PEGShadowNode newOn: #optional for: string from: pos to: childResult endPos children: childResult nodeList]'
+			^ childResult]'

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"arity" : "pre 3/23/2020 11:13",
 		"childName:" : "pre 3/20/2020 17:00",
 		"childNames:count:" : "pre 3/20/2020 17:01",
 		"compile:into:" : "fs 8/8/2019 13:01",
