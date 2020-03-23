@@ -1,0 +1,1 @@
+A ShadowNode can be used to pass information between PExpr without the node being considered in building the final cst. The relevant method is #nodeList.

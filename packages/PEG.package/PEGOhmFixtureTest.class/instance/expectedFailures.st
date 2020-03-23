@@ -1,4 +1,4 @@
 failures
 expectedFailures
 
-	^ #(testLeftRecursionSideNested testLeftRecursionTricky testPlus)
+	^ #(testLeftRecursionSideNested testLeftRecursionTricky)
