@@ -2,7 +2,9 @@ method body generation
 methodBodyTemplate
 
 	^ '| recallResult leftRecursion childResult result |
+	"The ordinary case is hidden in this call"
 	recallResult := self recall: #{1} withName: #{2} atPos: pos.
+
 	recallResult
 		ifNil: [
 			leftRecursion := PEGLeftRecursion newWithSeed: nil withRule: #{1}.
@@ -20,10 +22,11 @@ methodBodyTemplate
 					(memoization at: pos) at: #{1} put: result.
 					^ result]
 				ifNotNil: [
+					(memoization at: pos) removeKey: #{1}. "No need for my own left recursion anymore"
 					leftRecursion seed: result.
 					^ self answer: #{1} withGrowableLeftRecursion: leftRecursion atPos: pos] ]
 		ifNotNil: [
-			(recallResult isMemberOf: PEGLeftRecursion)
+			recallResult isLeftRecursion
 				ifTrue: [
 					self setup: #{1} withDetectedLeftRecursion: recallResult.
 					^ recallResult seed]

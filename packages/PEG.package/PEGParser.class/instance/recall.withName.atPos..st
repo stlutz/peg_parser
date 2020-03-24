@@ -1,22 +1,24 @@
 private
-recall: ruleMethod withName: ruleName atPos: pos
+recall: ruleMethodSelector withName: ruleName atPos: pos
 	| memoizationResult head |
-	memoizationResult := (memoization at: pos ifAbsent: [^nil]) at: ruleMethod ifAbsent: [nil].
+	memoizationResult := (memoization at: pos ifAbsent: [^ nil]) 
+		at: ruleMethodSelector ifAbsent: [nil].
 	head := heads at: pos.
 	
 	head ifNil: [^ memoizationResult].
 	
-	(memoizationResult == nil and: [ruleMethod ~~ head ruleMethod] and: [(head involvedSet includes: ruleMethod) not])
-		ifTrue: [^ nil].
+	(memoizationResult isNil 
+		and: [ruleMethodSelector ~~ head ruleMethod] 
+		and: [(head involvedSet includes: ruleMethodSelector) not])
+			ifTrue: [^ nil].
 	
-	(head evalSet includes: ruleMethod)
+	(head evalSet includes: ruleMethodSelector)
 		ifTrue: [
 			| childResult |
-			head evalSet remove: ruleMethod.
-			childResult := self perform: (ruleMethod , ':') asSymbol with: pos.
+			head evalSet remove: ruleMethodSelector.
+			childResult := self perform: ruleMethodSelector asSimpleSetter with: pos.
 			
-			^ (memoization at: pos) at: ruleMethod put: (
-				childResult
+			^ childResult
 					ifNil: [nil]
 					ifNotNil: [
 						PEGNode 
@@ -24,6 +26,6 @@ recall: ruleMethod withName: ruleName atPos: pos
 							for: string
 							from: pos 
 							to: childResult endPos 
-							children: childResult nodeList ] ) ].
+							children: childResult nodeList ]].
 	
 	^ memoizationResult

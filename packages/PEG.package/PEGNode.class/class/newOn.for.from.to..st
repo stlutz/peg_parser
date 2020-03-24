@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 newOn: ruleName for: string from: startPos to: endPos
 
 	^ self new

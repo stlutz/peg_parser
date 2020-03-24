@@ -2,8 +2,8 @@ assertions
 assertFixture: fixture
 	
 	| json ohmGrammar startRule parser |
-	json := Json readFrom: (ReadStream on: fixture).
-	ohmGrammar := OhmGrammar new: (json at: 'grammar').
+	json := Json readFrom: fixture readStream.
+	ohmGrammar := OhmGrammar new: json grammar.
 	startRule := ohmGrammar defaultStartRuleName.
 	
 	"To ensure previous rules are cleaned up between runs.... --pre"

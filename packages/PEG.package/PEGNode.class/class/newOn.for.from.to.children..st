@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 newOn: ruleName for: contents from: startPos to: endPos children: children
 
 	^ self new
