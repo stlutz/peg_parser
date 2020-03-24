@@ -10,6 +10,7 @@ parse_lower: t1
 				newOn: #'_terminal'
 				for: string
 				from: t1
-				to: t1 + 1]
+				to: t1 + 1
+				children: {t2}]
 		ifFalse: [self reportFailureOf: {$a. $z} atPos: t1.
 			nil]

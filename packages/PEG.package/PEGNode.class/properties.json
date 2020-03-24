@@ -10,7 +10,8 @@
 		"startPos",
 		"endPos",
 		"children",
-		"contents" ],
+		"contents",
+		"parent" ],
 	"name" : "PEGNode",
 	"pools" : [
 		 ],

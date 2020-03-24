@@ -10,6 +10,7 @@ parse_digit: t1
 				newOn: #'_terminal'
 				for: string
 				from: t1
-				to: t1 + 1]
+				to: t1 + 1
+				children: {t2}]
 		ifFalse: [self reportFailureOf: {$0. $9} atPos: t1.
 			nil]

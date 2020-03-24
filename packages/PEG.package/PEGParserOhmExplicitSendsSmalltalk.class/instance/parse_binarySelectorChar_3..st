@@ -12,3 +12,4 @@ parse_binarySelectorChar_3: t1
 		for: string
 		from: t1
 		to: t1 + '@' size
+		children: {'@'}

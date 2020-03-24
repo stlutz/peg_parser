@@ -12,3 +12,4 @@ parse_byteArrayNumber_threeDigits_1_2: t1
 		for: string
 		from: t1
 		to: t1 + '2' size
+		children: {'2'}

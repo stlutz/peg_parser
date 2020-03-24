@@ -1,4 +1,4 @@
 accessing
 children
 
-	^ children
+	^ children ifNil: [#()]

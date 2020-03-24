@@ -12,3 +12,4 @@ parse_pseudoVariableReference_1: t1
 		for: string
 		from: t1
 		to: t1 + 'self' size
+		children: {'self'}

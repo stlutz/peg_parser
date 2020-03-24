@@ -12,3 +12,4 @@ parse_scaledDecimalLiteral_3: t1
 		for: string
 		from: t1
 		to: t1 + 's' size
+		children: {'s'}

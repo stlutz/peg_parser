@@ -12,3 +12,4 @@ parse_radixFloatingPointLiteral_2: t1
 		for: string
 		from: t1
 		to: t1 + 'r' size
+		children: {'r'}

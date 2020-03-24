@@ -12,3 +12,4 @@ parse_constantReference_1: t1
 		for: string
 		from: t1
 		to: t1 + 'true' size
+		children: {'true'}

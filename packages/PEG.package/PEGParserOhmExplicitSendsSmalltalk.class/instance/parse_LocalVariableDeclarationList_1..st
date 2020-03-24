@@ -12,3 +12,4 @@ parse_LocalVariableDeclarationList_1: t1
 		for: string
 		from: t1
 		to: t1 + '|' size
+		children: {'|'}

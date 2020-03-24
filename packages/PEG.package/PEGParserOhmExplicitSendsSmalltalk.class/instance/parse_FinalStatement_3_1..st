@@ -12,3 +12,4 @@ parse_FinalStatement_3_1: t1
 		for: string
 		from: t1
 		to: t1 + '.' size
+		children: {'.'}

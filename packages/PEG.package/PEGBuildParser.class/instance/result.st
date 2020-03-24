@@ -3,7 +3,7 @@ result
 	(superclass includesBehavior: PEGParser) ifFalse: [
 		self error: 'Class must inherit from PEGParser.'].
 	
-	category ifNil: [category := 'GeneratedPEGParsers'].
+	category ifNil: [category := 'PEG-GeneratedParsers'].
 	
 	parserClass := superclass subclass: self classIdentifier
 		instanceVariableNames: ''
