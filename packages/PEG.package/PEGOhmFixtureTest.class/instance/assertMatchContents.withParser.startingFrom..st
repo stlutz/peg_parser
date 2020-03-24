@@ -2,8 +2,8 @@ assertions
 assertMatchContents: cases withParser: parser startingFrom: startRule
 	cases do: [:case |
 		| input expect streamAtEnd result |
-		input := case at: 'input'.
-		expect := case at: 'expect'.
+		input := case input.
+		expect := case expect.
 		streamAtEnd := case at: 'streamAtEnd' ifAbsent: [true].
 		
 		streamAtEnd

@@ -1,4 +1,4 @@
-as yet unclassified
+generating
 convertExpr: anOhmExpr isSyntactic: isSyntactic
 	| g actions |
 	g := generator.

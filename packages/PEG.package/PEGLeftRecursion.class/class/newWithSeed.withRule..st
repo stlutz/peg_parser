@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 newWithSeed: ast withRule: ruleMethod
 	^ self new
 		seed: ast;

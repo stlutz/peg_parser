@@ -1,4 +1,4 @@
-testing
+tests
 testString
 	| stringGenerator parser parseString parseResult |
 	stringGenerator := PEGExprStringGenerator newString: 'matchstring'.

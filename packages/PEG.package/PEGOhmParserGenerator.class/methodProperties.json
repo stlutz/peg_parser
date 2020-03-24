@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"generateFrom:" : "fs 9/15/2019 14:48" },
+		"generateFrom:" : "pre 3/24/2020 09:43" },
 	"instance" : {
-		"convertExpr:isSyntactic:" : "pre 3/20/2020 16:16",
-		"generate" : "fs 10/23/2019 10:55",
+		"convertExpr:isSyntactic:" : "pre 3/24/2020 11:21",
+		"generate" : "pre 3/24/2020 12:35",
 		"grammar:" : "fs 8/9/2019 15:50" } }

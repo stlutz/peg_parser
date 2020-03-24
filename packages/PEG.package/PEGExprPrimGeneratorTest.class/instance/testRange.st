@@ -1,4 +1,4 @@
-testing
+tests
 testRange
 	| rangeGenerator parser parseString parseResult |
 	rangeGenerator := PEGExprRangeGenerator newFrom: $4 to: $9.

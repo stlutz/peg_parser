@@ -1,0 +1,4 @@
+tests
+testLeftRecursionPreviouslyFailed
+
+	self assertFixture: OhmParsingExpressionFixtures leftRecursionFailedPreviously

@@ -17,14 +17,14 @@ methodBodyTemplate
 					PEGNode newOn: #{2} for: string from: pos to: childResult endPos children: childResult nodeList].
 			leftRecursionStack removeFirst.
 			
-			leftRecursion head
-				ifNil: [
-					(memoization at: pos) at: #{1} put: result.
-					^ result]
-				ifNotNil: [
-					(memoization at: pos) removeKey: #{1}. "No need for my own left recursion anymore"
-					leftRecursion seed: result.
-					^ self answer: #{1} withGrowableLeftRecursion: leftRecursion atPos: pos] ]
+			(leftRecursion head isNil "we have not hit a left-recursive call during our evaluation") 
+					ifTrue: [
+						(memoization at: pos) at: #{1} put: result.
+						^ result]
+					ifFalse: [ "some left recursion occurred during a previous application of this rule at this position"
+						(memoization at: pos) removeKey: #{1}. "No need for my own left recursion anymore"
+						leftRecursion seed: result.
+						^ self answer: #{1} withGrowableLeftRecursion: leftRecursion atPos: pos] ]
 		ifNotNil: [
 			recallResult isLeftRecursion
 				ifTrue: [

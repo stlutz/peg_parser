@@ -12,10 +12,11 @@ methodBodyTemplate
 			children add: currentResult]
 	] doWhileTrue: [currentResult notNil].
 
-	children ifEmpty: [children := columnarChildren collect: [:c | nil]].
+	children 
+		ifEmpty: [columnarChildren := columnarChildren collect: [:c | nil]]
+		ifNotEmpty: [self rows: children toColumns: columnarChildren].
 	^ children size > 0
 		ifTrue: [
-			self rows: children toColumns: columnarChildren.
 			PEGShadowNode
 				newOn: #shadow
 				for: string

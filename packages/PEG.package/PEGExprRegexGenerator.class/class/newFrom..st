@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 newFrom: regexString
 	| generator |
 	generator := self new.

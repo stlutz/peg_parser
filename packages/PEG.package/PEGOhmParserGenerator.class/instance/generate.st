@@ -1,4 +1,4 @@
-as yet unclassified
+generating
 generate
 	| superclass |
 	grammar == grammar superGrammar

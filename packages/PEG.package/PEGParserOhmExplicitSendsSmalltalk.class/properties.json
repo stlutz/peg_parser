@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-GeneratedParsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGParserOhmExplicitSendsSmalltalk",
+	"pools" : [
+		 ],
+	"super" : "PEGParserBuiltInRules",
+	"type" : "normal" }

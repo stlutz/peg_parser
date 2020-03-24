@@ -1,4 +1,4 @@
-testing
+tests
 testSimpleApply
 	"
 	a = a 'b' | 'a'

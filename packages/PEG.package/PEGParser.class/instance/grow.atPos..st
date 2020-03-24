@@ -2,7 +2,7 @@ private
 grow: leftRecursion atPos: pos
 	| result currentResult growing selector |
 	heads at: pos put: leftRecursion head.
-
+	
 	result := leftRecursion seed.
 	growing := true.
 	selector := leftRecursion ruleMethod asSimpleSetter.
@@ -21,11 +21,13 @@ grow: leftRecursion atPos: pos
 				(memoization at: pos) at: leftRecursion ruleMethod put: result]
 	] doWhileTrue: [growing].
 
-	"We clear the memoization as the result of a left-recursive call should not be memoized.
+	"We clear the memoization as the results of left-recursive growing should not be memoized.
 	This is an optimized version of the approach taken in OhmPositionInfo>>#memoizedResultFor:ifAbsent:
 	It assumes that it is cheaper for us to reparse a left-recursive call than to check on every memoization
 	whether a memoized result can be used."
 	(memoization at: pos) removeKey: leftRecursion ruleMethod.
+	leftRecursion head involvedSet do: [:ruleMethodSelector |
+		(memoization at: pos) removeKey: ruleMethodSelector ifAbsent: []].
 	heads at: pos put: nil.
 
 	^ result

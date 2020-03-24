@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testSyntacticalOneOrMore
 	"
 	identifier := ([a-z] | [A-Z]) ([a-z] | [A-Z] | [0-9])*

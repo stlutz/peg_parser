@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGExplicitSendsSmalltalkParserTest",
+	"pools" : [
+		 ],
+	"super" : "OhmExplicitSendsSmalltalkGrammarTest",
+	"type" : "normal" }

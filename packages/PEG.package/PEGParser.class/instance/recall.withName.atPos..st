@@ -9,7 +9,7 @@ recall: ruleMethodSelector withName: ruleName atPos: pos
 	
 	(memoizationResult isNil 
 		and: [ruleMethodSelector ~~ head ruleMethod] 
-		and: [(head involvedSet includes: ruleMethodSelector) not])
+		and: [(head isInvolvedRule: ruleMethodSelector) not])
 			ifTrue: [^ nil].
 	
 	(head evalSet includes: ruleMethodSelector)

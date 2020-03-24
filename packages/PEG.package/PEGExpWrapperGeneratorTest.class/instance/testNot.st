@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testNot
 	| stringGenerator notGenerator parser parseString parseResult |
 	

@@ -1,17 +1,16 @@
 parsing
 partialParse: parseString startingFrom: ruleName
-	| methodSignature parseResult |
-	string := parseString.
-	memoization := (1 to: parseString size + 1) collect: [:index | IdentityDictionary new].
-	heads := Array new: parseString size + 1.
-	leftRecursionStack := LinkedList new.
-	rightmostFailure := PEGParserFailure newAt: 0.
+	| methodSignature parseResult startPosition |
+	self initializeParsingInformationFor: parseString.
+	
+	startPosition := (self isSyntactic: ruleName) 
+		ifTrue: [self skipSpaces: 1]
+		ifFalse: [1].
 	
 	methodSignature := ('apply_' , ruleName , ':') asSymbol.
-	parseResult := self perform: methodSignature with: 1.
+	parseResult := self perform: methodSignature with: startPosition.
 
-
-	parseResult == nil ifFalse: [
+	parseResult ifNotNil: [
 		^ PEGMatchResult new
 			cst: parseResult;
 			yourself].

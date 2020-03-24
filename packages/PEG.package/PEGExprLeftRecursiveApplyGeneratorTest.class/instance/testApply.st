@@ -1,4 +1,4 @@
-testing
+tests
 testApply
 	"
 	a = b | c | '_'

@@ -1,4 +1,4 @@
-testing
+tests
 testSynacticalSequence
 	"
 	a := b c d

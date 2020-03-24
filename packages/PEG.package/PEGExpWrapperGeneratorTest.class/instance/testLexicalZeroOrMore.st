@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testLexicalZeroOrMore
 	"[0-9]*"
 	| rangeGenerator zeroOrMoreGenerator parser parseString parseResult |

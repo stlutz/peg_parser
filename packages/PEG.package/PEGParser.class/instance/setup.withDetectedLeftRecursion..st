@@ -3,7 +3,7 @@ setup: ruleMethod withDetectedLeftRecursion: leftRecursion
 	| leftRecursionStackLink |
 	leftRecursion head ifNil: [leftRecursion head: (PEGLeftRecursionHead newWithRule: ruleMethod)].
 	leftRecursionStackLink := leftRecursionStack firstLink.
-	[leftRecursionStackLink isNil not and: [leftRecursionStackLink value head ~~ leftRecursion head]]
+	[leftRecursionStackLink notNil and: [leftRecursionStackLink value head ~~ leftRecursion head]]
 		whileTrue: [
 			leftRecursionStackLink value head: leftRecursion head.
 			leftRecursion head involvedSet add: leftRecursionStackLink value ruleMethod.

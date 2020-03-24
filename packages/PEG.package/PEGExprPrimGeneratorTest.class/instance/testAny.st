@@ -1,4 +1,4 @@
-testing
+tests
 testAny
 	| anyGenerator parser parseString parseResult |
 	anyGenerator := PEGExprAnyGenerator new.

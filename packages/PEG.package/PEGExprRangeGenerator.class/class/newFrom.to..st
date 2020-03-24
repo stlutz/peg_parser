@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 newFrom: startChar to: endChar
 	| generator |
 	generator := self new.

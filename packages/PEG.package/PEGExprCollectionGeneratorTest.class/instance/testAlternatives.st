@@ -1,4 +1,4 @@
-testing
+tests
 testAlternatives
 	"rule = 'matchstring' | [4-9]"
 	| stringGenerator rangeGenerator alternativesGenerator parser parseString parseResult |

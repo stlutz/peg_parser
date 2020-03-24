@@ -2,8 +2,8 @@ assertions
 assertMatchInterval: cases withParser: parser startingFrom: startRule
 	cases do: [:case |
 		| input expectedIntervals result |
-		input := case at: 'input'.
-		expectedIntervals := case at: 'expectInterval'.
+		input := case input.
+		expectedIntervals := case expectInterval.
 		
 		expectedIntervals ifNotNil: [
 			expectedIntervals do: [:expectedInterval | 	
