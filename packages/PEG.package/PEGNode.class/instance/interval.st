@@ -2,4 +2,7 @@ accessing
 interval
 	"for compatibility with Ohm/S"
 	
-	^ (self contents copyFrom: self startPos to: self endPos - 1) readStream 
+	 ^ OhmInterval 
+		newOn: self contents readStream
+		from: self startPos 
+		to: self endPos - 1 
