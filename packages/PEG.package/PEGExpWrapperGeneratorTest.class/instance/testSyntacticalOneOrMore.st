@@ -15,8 +15,8 @@ testSyntacticalOneOrMore
 		PEGExprLexicalZeroOrMoreGenerator new: (PEGExprAlternativesGenerator new: {
 			PEGExprRangeGenerator newFrom: $a to: $z .
 			PEGExprRangeGenerator newFrom: $A to: $Z .
-			PEGExprRangeGenerator newFrom:	$0 to: $9 })}.
-	stringGenerator := PEGExprSyntacticalOneOrMoreGenerator new: (PEGExprLexicalApplyWrapperGenerator newWithRule: #identifier).
+			PEGExprRangeGenerator newFrom: $0 to: $9 })}.
+	stringGenerator := PEGExprLexicalOneOrMoreGenerator new: (PEGExprSyntacticalApplyWrapperGenerator newWithRule: #identifier).
 	
 	spacesGenerator compile: #parse_spaces into: parserClass.
 	identifierGenerator compile: #parse_identifier into: parserClass.

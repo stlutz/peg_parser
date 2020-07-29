@@ -12,3 +12,4 @@ parse_identifier_2_1_2: t1
 		for: string
 		from: t1
 		to: t1 + '_' size
+		children: {'_'}

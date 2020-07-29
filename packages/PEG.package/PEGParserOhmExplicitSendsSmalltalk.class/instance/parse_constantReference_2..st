@@ -1,15 +1,13 @@
 as yet unclassified
 parse_constantReference_2: t1 
-	'false'
-		withIndexDo: [:t2 :t3 | t2
-					== (string
-							at: t1 + t3 - 1
-							ifAbsent: [])
-				ifFalse: [self reportFailureOf: 'false' atPos: t1.
-					^ nil]].
-	^ PEGNode
-		newOn: #'_terminal'
-		for: string
-		from: t1
-		to: t1 + 'false' size
-		children: {'false'}
+	| t2 |
+	t2 := self parse_constantReference_2_1: t1.
+	^ t2
+		ifNil: [PEGShadowNode
+				newOn: #shadow
+				for: string
+				from: t1
+				to: t1
+				children: OrderedCollection new]
+		ifNotNil: [self reportFailureOf: #not atPos: t1.
+			nil]

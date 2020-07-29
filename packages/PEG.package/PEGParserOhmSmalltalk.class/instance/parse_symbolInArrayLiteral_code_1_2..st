@@ -12,3 +12,4 @@ parse_symbolInArrayLiteral_code_1_2: t1
 		for: string
 		from: t1
 		to: t1 + '.' size
+		children: {'.'}

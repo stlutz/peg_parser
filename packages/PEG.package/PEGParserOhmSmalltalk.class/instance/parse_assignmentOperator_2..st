@@ -12,3 +12,4 @@ parse_assignmentOperator_2: t1
 		for: string
 		from: t1
 		to: t1 + '_' size
+		children: {'_'}

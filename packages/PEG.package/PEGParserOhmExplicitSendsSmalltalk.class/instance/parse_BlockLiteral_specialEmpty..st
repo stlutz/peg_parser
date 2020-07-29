@@ -3,19 +3,16 @@ parse_BlockLiteral_specialEmpty: t1
 	| t2 t3 t4 |
 	t2 := t1.
 	t4 := OrderedCollection new: 3.
-	t2 := self skipSpaces: t2.
 	t3 := self parse_BlockLiteral_specialEmpty_1: t2.
 	t3
 		ifNil: [^ nil].
 	t2 := t3 endPos.
 	t4 add: t3.
-	t2 := self skipSpaces: t2.
 	t3 := self parse_BlockLiteral_specialEmpty_2: t2.
 	t3
 		ifNil: [^ nil].
 	t2 := t3 endPos.
 	t4 add: t3.
-	t2 := self skipSpaces: t2.
 	t3 := self parse_BlockLiteral_specialEmpty_3: t2.
 	t3
 		ifNil: [^ nil].

@@ -3,13 +3,11 @@ parse_Statement: t1
 	| t2 t3 t4 |
 	t2 := t1.
 	t4 := OrderedCollection new: 2.
-	t2 := self skipSpaces: t2.
 	t3 := self parse_Statement_1: t2.
 	t3
 		ifNil: [^ nil].
 	t2 := t3 endPos.
 	t4 add: t3.
-	t2 := self skipSpaces: t2.
 	t3 := self parse_Statement_2: t2.
 	t3
 		ifNil: [^ nil].

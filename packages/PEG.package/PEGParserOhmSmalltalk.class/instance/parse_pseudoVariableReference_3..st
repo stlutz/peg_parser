@@ -12,3 +12,4 @@ parse_pseudoVariableReference_3: t1
 		for: string
 		from: t1
 		to: t1 + 'thisContext' size
+		children: {'thisContext'}

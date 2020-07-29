@@ -29,36 +29,38 @@ convertExpr: anOhmExpr isSyntactic: isSyntactic
 		convertedChildExpr := self convertExpr: anOhmExpr term isSyntactic: isSyntactic.
 
 		anOhmExpr min = 0 ifTrue: [
-			^ isSyntactic
-				ifTrue: [^ g synstar: convertedChildExpr]
-				ifFalse: [^ g lexstar: convertedChildExpr]].
+			^ g lexstar: convertedChildExpr].
 		anOhmExpr min = 1 ifTrue: [
-			^ isSyntactic
-				ifTrue: [g synplus: convertedChildExpr]
-				ifFalse: [g lexplus: convertedChildExpr]].
+			^ g lexplus: convertedChildExpr].
 		self error: 'Min has to be 0 or 1.'].
 
 	actions at: OhmPExprOpt put: [
 		^ g opt: (self convertExpr: anOhmExpr term isSyntactic: isSyntactic)].
 	
 	actions at: OhmPExprAnything put: [
-		^ g any].
+		^ isSyntactic 
+			ifTrue: [g synany]
+			ifFalse: [g any]].
 
 	actions at: OhmPExprRange put: [
-		^ g range: anOhmExpr startCharacter to: anOhmExpr endCharacter].
+		^ isSyntactic
+			ifTrue: [g synrange: anOhmExpr startCharacter to: anOhmExpr endCharacter]
+			ifFalse: [g range: anOhmExpr startCharacter to: anOhmExpr endCharacter]].
 	
 	actions at: OhmPExprRegex put: [
-		^ g regex: anOhmExpr regexString].
+		^ isSyntactic
+			ifTrue: [g synregex: anOhmExpr regexString]
+			ifFalse: [g regex: anOhmExpr regexString]].
 
 	actions at: OhmPExprString put: [
-		^ g str: anOhmExpr matchString].
+		^ isSyntactic
+			ifTrue: [g synstring: anOhmExpr matchString]
+			ifFalse: [g string: anOhmExpr matchString]].
 
 	actions at: OhmPExprSeq put: [
 		| childGenerators |
 		childGenerators := anOhmExpr terms collect: [:childExpr | self convertExpr: childExpr isSyntactic: isSyntactic].
-		^ isSyntactic
-			ifTrue: [g synseq: childGenerators]
-			ifFalse: [g lexseq: childGenerators]].
+		^g lexseq: childGenerators].
 	
 	actions at: OhmPExprParam put: [
 		self flag: #todo. "Implement the param translation once it it is included in Ohm."

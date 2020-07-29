@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-Exprs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGExprSyntacticRangeGenerator",
+	"pools" : [
+		 ],
+	"super" : "PEGExprRangeGenerator",
+	"type" : "normal" }

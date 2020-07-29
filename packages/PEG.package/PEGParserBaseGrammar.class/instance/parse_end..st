@@ -1,13 +1,21 @@
 as yet unclassified
 parse_end: t1 
-	| t2 |
-	t2 := self parse_end_1: t1.
-	^ t2
-		ifNil: [PEGShadowNode
-				newOn: #shadow
-				for: string
-				from: t1
-				to: t1
-				children: OrderedCollection new]
-		ifNotNil: [self reportFailureOf: #not atPos: t1.
-			nil]
+	| t2 t3 t4 |
+	t2 := t1.
+	t4 := OrderedCollection new: 2.
+	t3 := self parse_end_1: t2.
+	t3
+		ifNil: [^ nil].
+	t2 := t3 endPos.
+	t4 add: t3.
+	t3 := self parse_end_2: t2.
+	t3
+		ifNil: [^ nil].
+	t2 := t3 endPos.
+	t4 add: t3.
+	^ PEGShadowNode
+		newOn: #shadow
+		for: string
+		from: t1
+		to: t2
+		children: (t4 collect: #nodeList) flatten

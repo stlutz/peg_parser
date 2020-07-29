@@ -1,0 +1,14 @@
+{
+	"category" : "PEG-GeneratedParsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PEGParserPEGMathBench",
+	"pools" : [
+		 ],
+	"super" : "PEGParser",
+	"type" : "normal" }

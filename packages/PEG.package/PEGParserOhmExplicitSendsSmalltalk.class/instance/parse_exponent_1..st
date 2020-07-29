@@ -2,17 +2,27 @@ as yet unclassified
 parse_exponent_1: t1 
 	| t2 |
 	t2 := self parse_exponent_1_1: t1.
-	^ t2
-		ifNil: [PEGShadowNode
+	t2
+		ifNotNil: [^ PEGShadowNode
 				newOn: #shadow
 				for: string
 				from: t1
-				to: t1
-				children: ((1 to: 1)
-						collect: [:t3 | PEGNode
-								newOn: #'_terminal'
-								for: string
-								from: t1
-								to: t1
-								children: {nil} asOrderedCollection])]
-		ifNotNil: [^ t2]
+				to: t2 endPos
+				children: t2 nodeList].
+	t2 := self parse_exponent_1_2: t1.
+	t2
+		ifNotNil: [^ PEGShadowNode
+				newOn: #shadow
+				for: string
+				from: t1
+				to: t2 endPos
+				children: t2 nodeList].
+	t2 := self parse_exponent_1_3: t1.
+	t2
+		ifNotNil: [^ PEGShadowNode
+				newOn: #shadow
+				for: string
+				from: t1
+				to: t2 endPos
+				children: t2 nodeList].
+	^ nil

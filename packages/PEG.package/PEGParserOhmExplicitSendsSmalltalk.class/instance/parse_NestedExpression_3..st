@@ -1,15 +1,17 @@
 as yet unclassified
 parse_NestedExpression_3: t1 
+	| t2 |
+	t2 := self skipSpaces: t1.
 	')'
-		withIndexDo: [:t2 :t3 | t2
+		withIndexDo: [:t3 :t4 | t3
 					== (string
-							at: t1 + t3 - 1
+							at: t2 + t4 - 1
 							ifAbsent: [])
-				ifFalse: [self reportFailureOf: ')' atPos: t1.
+				ifFalse: [self reportFailureOf: ')' atPos: t2.
 					^ nil]].
 	^ PEGNode
 		newOn: #'_terminal'
 		for: string
-		from: t1
-		to: t1 + ')' size
+		from: t2
+		to: t2 + ')' size
 		children: {')'}

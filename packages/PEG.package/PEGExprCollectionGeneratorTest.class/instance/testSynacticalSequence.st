@@ -1,17 +1,17 @@
 tests
 testSynacticalSequence
 	"
-	a := b c d
+	A := b c d
 	b := 'abc'
 	c := [0-9]*
 	d := 'x'
 	"
 	| spacesGenerator aGenerator bGenerator cGenerator dGenerator parser parseResult |
 	spacesGenerator := PEGExprLexicalZeroOrMoreGenerator new: (PEGExprRangeGenerator newFrom: Character null to: Character space).
-	aGenerator := PEGExprSyntacticalSequenceGenerator new: {
-		PEGExprLexicalApplyWrapperGenerator newWithRule: #b .
-		PEGExprLexicalApplyWrapperGenerator newWithRule: #c .
-		PEGExprLexicalApplyWrapperGenerator newWithRule: #d }.
+	aGenerator := PEGExprLexicalSequenceGenerator new: {
+		PEGExprSyntacticalApplyWrapperGenerator newWithRule: #b .
+		PEGExprSyntacticalApplyWrapperGenerator newWithRule: #c .
+		PEGExprSyntacticalApplyWrapperGenerator newWithRule: #d }.
 	bGenerator := PEGExprStringGenerator newString: 'abc'.
 	cGenerator := PEGExprLexicalZeroOrMoreGenerator new: (PEGExprRangeGenerator newFrom: $0 to: $9).
 	dGenerator := PEGExprStringGenerator newString: 'x'.

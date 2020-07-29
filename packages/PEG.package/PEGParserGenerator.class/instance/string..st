@@ -1,3 +1,3 @@
 expressions
 string: aString
-	^ self str: aString
+	^ PEGExprStringGenerator newString: aString

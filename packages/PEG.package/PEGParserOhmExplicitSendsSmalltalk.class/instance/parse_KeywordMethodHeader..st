@@ -1,30 +1,26 @@
 as yet unclassified
 parse_KeywordMethodHeader: t1 
-	| t2 t3 t5 t6 t7 |
-	t3 := t1.
+	| t2 t3 t4 t6 |
+	t4 := t1.
 	t2 := OrderedCollection new.
-	t6 := (1 to: 1)
-				collect: [:t8 | OrderedCollection new].
-	[t7 := self skipSpaces: t3.
-	t5 := self parse_KeywordMethodHeader_1: t7.
-	t5
-		ifNotNil: [t3 := t5 endPos.
-			t2 add: t5]]
-		doWhileTrue: [t5 notNil].
-	t2
-		ifEmpty: [t6 := t6
-						collect: [:t8 | ]]
-		ifNotEmpty: [self rows: t2 toColumns: t6].
+	t3 := (1 to: 1)
+				collect: [:t7 | OrderedCollection new].
+	[t6 := self parse_KeywordMethodHeader_1: t4.
+	t6
+		ifNotNil: [t4 := t6 endPos.
+			t2 add: t6]]
+		doWhileTrue: [t6 notNil].
 	^ t2 size > 0
-		ifTrue: [PEGShadowNode
+		ifTrue: [self rows: t2 toColumns: t3.
+			PEGShadowNode
 				newOn: #shadow
 				for: string
 				from: t1
-				to: t2 last endPos
+				to: t4
 				children: ((1 to: 1)
-						collect: [:t8 | PEGNode
+						collect: [:t7 | PEGNode
 								newOn: #'_list'
 								for: string
 								from: t1
-								to: t2 last endPos
-								children: (t6 at: t8)])]
+								to: t4
+								children: (t3 at: t7)])]

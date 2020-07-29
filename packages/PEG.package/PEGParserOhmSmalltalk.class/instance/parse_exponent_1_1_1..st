@@ -12,3 +12,4 @@ parse_exponent_1_1_1: t1
 		for: string
 		from: t1
 		to: t1 + 'e' size
+		children: {'e'}
