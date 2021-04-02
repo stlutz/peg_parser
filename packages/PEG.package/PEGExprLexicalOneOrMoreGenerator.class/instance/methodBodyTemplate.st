@@ -1,31 +1,30 @@
 method body generation
 methodBodyTemplate
-	^ '| currentPos currentResult children columnarChildren |
+	^ '| currentPos children columnarChildren |
 	currentPos := pos.
 	children := OrderedCollection new.
-	columnarChildren := (1 to: {2}) collect: [:n | OrderedCollection new].
 	[
-		currentResult := self {1}: currentPos.
-		currentResult ifNotNil: [
+		((self {1}: currentPos) ifNotNil: [:currentResult |
 			currentPos := currentResult endPos.
-			children add: currentResult]
-	] doWhileTrue: [currentResult notNil].
+			children add: currentResult]) notNil
+	] whileTrue.
 
-	^ children size > 0
-		ifTrue: [
-			self rows: children toColumns: columnarChildren.
-			PEGShadowNode
-				newOn: #shadow
+	children ifEmpty: [^ nil]. "We fail as there are not enough results"
+	
+	columnarChildren := Array new: {2}.
+	1 to: {2} do: [:i |
+		columnarChildren at: i put: OrderedCollection new].
+	self rows: children toColumns: columnarChildren.
+	
+	^ PEGShadowNode
+		newOn: #shadow
+		for: string
+		from: pos
+		to: currentPos
+		children: (columnarChildren collect: [:c | 
+			PEGNode 
+				newOn: #_list 
 				for: string
 				from: pos
 				to: currentPos
-				children: ((1 to: {2}) collect: [:n | 
-					PEGNode 
-						newOn: #_list 
-						for: string
-						from: pos
-						to: currentPos
-						children: (columnarChildren at: n)])]
-		ifFalse: [
-			"We fail as there are not enough results"
-			nil]'
+				children: c])'

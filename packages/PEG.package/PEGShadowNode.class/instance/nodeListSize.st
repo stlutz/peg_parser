@@ -1,0 +1,4 @@
+accessing
+nodeListSize
+
+	^ children size

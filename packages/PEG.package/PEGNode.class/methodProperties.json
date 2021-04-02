@@ -1,22 +1,19 @@
 {
 	"class" : {
-		"newOn:for:from:to:" : "pre 3/18/2020 16:16",
-		"newOn:for:from:to:children:" : "pre 3/18/2020 16:11" },
+		"newOn:for:from:to:children:" : "stlu 4/2/2021 00:06" },
 	"instance" : {
 		"children" : "pre 3/24/2020 16:22",
-		"children:" : "fs 10/6/2019 19:37",
 		"contents" : "pre 3/18/2020 16:10",
-		"contents:" : "pre 3/18/2020 16:10",
 		"endPos" : "fs 10/6/2019 19:37",
-		"endPos:" : "fs 10/6/2019 19:37",
-		"initialize" : "pre 3/24/2020 16:22",
+		"initialize" : "stlu 4/2/2021 00:06",
+		"initializeWithRuleName:contents:startPos:endPos:children:" : "stlu 4/2/2021 00:12",
 		"interval" : "pre 4/29/2020 10:58",
 		"isLeftRecursion" : "pre 3/23/2020 18:38",
-		"nodeList" : "pre 3/23/2020 14:51",
+		"isTerminal" : "stlu 4/2/2021 12:18",
+		"nodeList" : "stlu 4/2/2021 00:01",
+		"nodeListSize" : "stlu 4/2/2021 15:12",
 		"parent" : "pre 3/24/2020 16:17",
-		"parent:" : "pre 3/24/2020 16:17",
-		"printString" : "fs 10/6/2019 19:39",
+		"parent:" : "stlu 4/2/2021 00:13",
+		"printOn:" : "stlu 4/1/2021 23:35",
 		"ruleName" : "fs 10/6/2019 19:37",
-		"ruleName:" : "fs 10/6/2019 19:37",
-		"startPos" : "fs 10/6/2019 19:37",
-		"startPos:" : "fs 10/6/2019 19:37" } }
+		"startPos" : "fs 10/6/2019 19:37" } }

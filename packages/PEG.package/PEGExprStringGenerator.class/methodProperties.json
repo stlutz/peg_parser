@@ -2,4 +2,8 @@
 	"class" : {
 		"newString:" : "fs 8/8/2019 14:06" },
 	"instance" : {
-		"methodBodyTemplate" : "pre 8/17/2020 11:14" } }
+		"compile:into:" : "stlu 4/2/2021 15:57",
+		"matchString" : "stlu 4/2/2021 03:19",
+		"methodBody" : "stlu 4/2/2021 03:46",
+		"methodBodyTemplateForCharacter" : "stlu 4/2/2021 04:15",
+		"methodBodyTemplateForString" : "stlu 4/2/2021 04:02" } }

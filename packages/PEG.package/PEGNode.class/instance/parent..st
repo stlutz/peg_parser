@@ -1,4 +1,4 @@
 accessing
 parent: aNode
 
-	parent := aNode
+	parent := aNode.

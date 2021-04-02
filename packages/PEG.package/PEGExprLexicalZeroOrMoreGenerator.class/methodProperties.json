@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"methodBodyTemplate" : "pre 3/24/2020 16:44" } }
+		"methodBody:" : "stlu 4/2/2021 13:36",
+		"methodBodyTemplateForArity1" : "stlu 4/2/2021 16:25",
+		"methodBodyTemplateForArityN" : "stlu 4/2/2021 16:26" } }

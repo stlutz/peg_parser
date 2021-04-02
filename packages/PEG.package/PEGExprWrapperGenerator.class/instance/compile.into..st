@@ -1,9 +1,8 @@
 evaluation
 compile: aName into: aClass
-	| childName methodString |
+	| childName source |
 	childName := self childName: aName.
 	childGenerator compile: childName into: aClass.
 	
-	methodString := (self methodHead: aName asString) , Character lf , self methodBodyTemplate.
-	methodString := methodString format: {childName . self arity}.
-	aClass compileSilently: methodString
+	source := (self methodHead: aName asString) , Character lf , (self methodBody: childName).
+	aClass compileSilently: source classified: self messageCategory

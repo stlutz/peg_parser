@@ -5,4 +5,4 @@ compile: aName into: aClass
 	"compile apply wrapper"
 	methodString := (self methodHead: aName) , Character lf, self methodBodyTemplate.
 	methodString := methodString format: {'apply_' , ruleName}.
-	aClass compileSilently: methodString
+	aClass compileSilently: methodString classified: self messageCategory

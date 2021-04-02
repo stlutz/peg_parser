@@ -7,4 +7,4 @@ compile: aName into: aClass
 	
 	methodString := (self methodHead: aName asString) , Character lf , (self methodBodyTemplateWith: childGenerators size).
 	methodString := methodString format: childNames.
-	aClass compileSilently: methodString
+	aClass compileSilently: methodString classified: self messageCategory

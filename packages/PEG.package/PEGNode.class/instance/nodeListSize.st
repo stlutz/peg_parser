@@ -1,0 +1,4 @@
+accessing
+nodeListSize
+
+	^ 1
