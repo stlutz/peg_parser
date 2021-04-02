@@ -1,10 +1,12 @@
 method body generation
 methodBodyTemplate
+
 	^ '| char skipPos |
 	skipPos := self skipSpaces: pos.
-	char := string at: skipPos ifAbsent: [^ nil].
-	(#startChar <= char and: [char <= #endChar]) ifFalse: [
-		self reportFailureOf: {#startChar . #endChar} atPos: skipPos.
+	skipPos > string size ifTrue: [^ nil].
+	char := string at: skipPos.
+	({3} <= char asInteger and: [{4} >= char asInteger]) ifFalse: [
+		self reportFailureOf: \{{1} . {2}\} atPos: skipPos.
 		^ nil].
 	
 	^ PEGNode
@@ -12,4 +14,4 @@ methodBodyTemplate
 		for: string
 		from: skipPos
 		to: skipPos + 1
-		children: {char}'
+		children: \{ char \}'

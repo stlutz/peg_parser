@@ -6,4 +6,8 @@ methodBody
 	template := string size > 1
 					ifTrue: [self methodBodyTemplateForString]
 					ifFalse: [self methodBodyTemplateForCharacter].
-	^ template format: { string storeString . string size storeString . string first storeString }
+	^ template format: {
+		string storeString .
+		string size storeString .
+		string first storeString .
+		(string size - 1) storeString }

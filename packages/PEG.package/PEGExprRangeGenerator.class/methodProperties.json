@@ -2,4 +2,8 @@
 	"class" : {
 		"newFrom:to:" : "fs 8/8/2019 13:08" },
 	"instance" : {
-		"methodBodyTemplate" : "stlu 4/2/2021 02:16" } }
+		"compile:into:" : "stlu 4/2/2021 17:56",
+		"endChar" : "stlu 4/2/2021 17:56",
+		"methodBody" : "stlu 4/2/2021 18:09",
+		"methodBodyTemplate" : "stlu 4/2/2021 18:12",
+		"startChar" : "stlu 4/2/2021 17:56" } }

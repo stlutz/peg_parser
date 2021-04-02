@@ -1,10 +1,10 @@
 method body generation
 methodBodyTemplateForCharacter
 
-	self flag: #todo. "can pos be > string size ?"
 	^ '| skipPos |
 	skipPos := self skipSpaces: pos.
-	{3} == (string at: skipPos ifAbsent: [nil]) ifFalse: [
+	skipPos > string size ifTrue: [^ nil].
+	{3} == (string at: skipPos) ifFalse: [
 		self reportFailureOf: {1} atPos: skipPos.
 		^ nil].
 	^ PEGNode

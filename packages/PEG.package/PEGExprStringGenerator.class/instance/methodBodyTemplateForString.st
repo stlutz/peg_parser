@@ -1,9 +1,9 @@
 method body generation
 methodBodyTemplateForString
 
-	self flag: #todo. "identity test for characters?"
-	^ '1 to: {2} do: [:index |
-		(({1} at: index) == (string at: (pos + index - 1) ifAbsent: [nil])) ifFalse: [
+	^ 'pos + {4} > string size ifTrue: [^ nil].
+	1 to: {2} do: [:index |
+		(({1} at: index) == (string at: pos + index - 1)) ifFalse: [
 			self reportFailureOf: {1} atPos: pos.
 			^ nil]].
 	^ PEGNode

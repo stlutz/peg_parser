@@ -1,8 +1,8 @@
 method body generation
 methodBodyTemplateForCharacter
 
-	self flag: #todo. "can pos be > string size ?"
-	^ '{3} == (string at: pos ifAbsent: [nil]) ifFalse: [
+	^ 'pos > string size ifTrue: [^ nil].
+	{3} == (string at: pos) ifFalse: [
 		self reportFailureOf: {1} atPos: pos.
 		^ nil].
 	^ PEGNode
